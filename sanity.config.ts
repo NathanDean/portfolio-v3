@@ -25,7 +25,8 @@ export default defineConfig({
       return S.list()
         .title("Content")
         .items([
-          orderableDocumentListDeskItem({type: "project", S, context})
+          orderableDocumentListDeskItem({type: "project", title: "Projects", S, context}),
+          S.documentTypeListItem("bio").title("Bio")
         ])
     }}),
     // Vision is for querying with GROQ from inside the Studio
