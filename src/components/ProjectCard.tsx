@@ -1,14 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { PortableText } from '@portabletext/react'
 import { urlFor } from '@/sanity/lib/image';
 import Card from './Card';
 import Project from '@/types/Project';
+import createPortableTextComponents from '@/utils/portableTextComponents';
 
 interface ProjectCardProps {
   project: Project,
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+
+  const components = createPortableTextComponents();
 
   return (
     <Card key={project.slug} className = "flex flex-col sm:flex-row h-96">
@@ -32,7 +36,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
 
-          <p>{project.description}</p>
+          <PortableText value = {project.description} components = {components} />
 
         </div>
 

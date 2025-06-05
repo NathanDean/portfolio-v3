@@ -25,7 +25,12 @@ export const projectType = defineType({
     }),
     defineField({
       name: 'description',
-      type: 'string',
+      type: 'array',
+      of: [
+        {
+          type: 'block'
+        }
+      ],
       validation: (rule) => rule.required(),
     }),
     defineField({
