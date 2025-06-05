@@ -45,3 +45,7 @@ a {
 header a {
   @apply text-2xl
 }
+
+.btn {
+  @apply p-2 border-1 border-sky-800 rounded-xl hover:bg-sky-900 text-sky-800 hover:text-white
+}

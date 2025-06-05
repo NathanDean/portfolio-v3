@@ -10,8 +10,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
 
+  console.log(project)
+
   return (
-    <Card key={project.slug} className = "flex flex-col sm:flex-row">
+    <Card key={project.slug} className = "flex flex-col sm:flex-row h-80">
         <div className = "w-full sm:w-1/2 relative">
           <Image 
             src = {urlFor(project.image).url()}
@@ -22,20 +24,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         </div>
 
-      <div className = "w-full sm:w-1/2 border-t border-gray-200 sm:border-l sm:border-t-0">
-        <div className = "p-6 space-y-1 md:space-y-2">
-        <h2>{project.name}</h2>
+      <div className = "flex flex-col justify-between w-full h-80 p-6 sm:w-1/2 border-t border-gray-200 sm:border-l sm:border-t-0">
+        <div className = "space-y-1 md:space-y-2">
+          <h2>{project.name}</h2>
 
-        <div className = "flex flex-wrap gap-1 md:gap-2 py-1 md:py-2 text-sm">
-          {project.tools.map(tool => (
-            <span key = {tool} className = "p-1 md:py-2 md:px-4 border-1 border-gray-400 rounded-4xl">{tool}</span>
-          ))}
+          <div className = "flex flex-wrap gap-1 md:gap-2 text-sm">
+            {project.tools.map(tool => (
+              <span key = {tool} className = "px-2 py-1 md:px-4 md:py-2 border-1 border-gray-400 rounded-4xl">{tool}</span>
+            ))}
+          </div>
+
+          <p>{project.description}</p>
+
         </div>
 
-        <p>{project.description}</p>
-
-        {project.gitHubLink && <Link href={project.gitHubLink}>GitHub</Link>}
-        </div>
+          <div>
+            {project.gitHubLink && <Link className = "btn" href={project.gitHubLink}>GitHub</Link>}
+            {project.appLink && <Link className = "btn" href = {project.appLink}>Visit app</Link>}
+          </div>
       </div>
     </Card>
   );
