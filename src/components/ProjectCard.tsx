@@ -10,11 +10,9 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
 
-  console.log(project.tools);
-
   return (
     <Card key={project.slug} className = "flex flex-col sm:flex-row">
-        <div className = "w-1/2 relative">
+        <div className = "w-full sm:w-1/2 relative">
           <Image 
             src = {urlFor(project.image).url()}
             alt = ""
@@ -24,7 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         </div>
 
-      <div className = "w-1/2 border-t border-gray-200 sm:border-l sm: border-t-0">
+      <div className = "w-full sm:w-1/2 border-t border-gray-200 sm:border-l sm:border-t-0">
         <div className = "p-6 space-y-1 md:space-y-2">
         <h2>{project.name}</h2>
 
