@@ -6,7 +6,7 @@ export default interface Project extends SanityDocument {
   slug: string;
   image: Image;
   description: string;
-  appLink: string;
-  githubLink: string;
+  appLink?: string;
+  gitHubLink?: string;
   tools: string[];
 }

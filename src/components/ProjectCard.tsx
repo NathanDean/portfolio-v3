@@ -36,7 +36,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <p>{project.description}</p>
 
-        <Link href={project.githubLink}>GitHub</Link>
+        {project.gitHubLink && <Link href={project.gitHubLink}>GitHub</Link>}
         </div>
       </div>
     </Card>

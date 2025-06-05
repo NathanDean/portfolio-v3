@@ -28,12 +28,10 @@ export const projectType = defineType({
     defineField({
       name: 'appLink',
       type: 'string',
-      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'githubLink',
+      name: 'gitHubLink',
       type: 'string',
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: 'tools',
