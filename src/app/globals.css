@@ -1,9 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-outfit: "Outfit", sans-serif
+  --font-outfit: 'Outfit', sans-serif;
 }
 
 @theme inline {
@@ -24,13 +24,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
-  @apply tracking-widest
+  @apply tracking-widest;
 }
 
 h1 {
-  @apply text-5xl tracking-widest
+  @apply text-5xl tracking-widest;
 }
 
 h2 {
-  @apply text-2xl tracking-widest
+  @apply text-2xl tracking-widest;
 }
