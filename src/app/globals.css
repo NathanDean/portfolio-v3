@@ -34,7 +34,7 @@ h2 {
   @apply text-2xl tracking-widest;
 }
 
-p {
+p, span {
   @apply tracking-widest
 }
 

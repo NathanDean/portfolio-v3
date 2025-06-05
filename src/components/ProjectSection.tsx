@@ -11,7 +11,7 @@ export default async function ProjectSection(){
 
     return (
 
-        <div className = "min-h-screen bg-cyan-50">
+        <div className = "flex flex-col xl:flex-row justify-center items-center gap-8 min-h-screen p-10 bg-sky-900">
 
             {projects.map((project) => (
                 <ProjectCard key={project.slug} project={project} />
