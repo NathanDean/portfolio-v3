@@ -10,8 +10,6 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
 
-  console.log(project)
-
   return (
     <Card key={project.slug} className = "flex flex-col sm:flex-row h-80">
         <div className = "w-full sm:w-1/2 relative">

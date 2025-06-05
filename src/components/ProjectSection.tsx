@@ -4,10 +4,9 @@ import Project from '@/types/Project';
 
 export default async function ProjectSection(){
 
-    const PROJECTS_QUERY = `*[_type == "project"]`;
+    const PROJECTS_QUERY = `*[_type == "project"]|order(orderRank)`;
     const options = { next: { revalidate: 30 } };
     const projects = await client.fetch<Project[]>(PROJECTS_QUERY, {}, options);
-
 
     return (
 
