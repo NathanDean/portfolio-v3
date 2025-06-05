@@ -38,9 +38,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         </div>
 
-          <div>
-            {project.gitHubLink && <Link className = "btn" href={project.gitHubLink}>GitHub</Link>}
-            {project.appLink && <Link className = "btn" href = {project.appLink}>Visit app</Link>}
+          <div className = "flex gap-2">
+            {project.gitHubLink && <Link className = "btn w-1/2" href={project.gitHubLink}>GitHub</Link>}
+            {project.appLink && <Link className = "btn w-1/2" href = {project.appLink}>Visit app</Link>}
           </div>
       </div>
     </Card>
