@@ -1,14 +1,8 @@
-import { client } from '@/sanity/lib/client';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
-import ProjectCard from '@/components/ProjectCard';
-import Project from '@/types/Project';
-
-const PROJECTS_QUERY = `*[_type == "project"]`;
-const options = { next: { revalidate: 30 } };
+import ProjectSection from '@/components/ProjectSection';
 
 export default async function Home() {
-  const projects = await client.fetch<Project[]>(PROJECTS_QUERY, {}, options);
 
   return (
     <>
@@ -17,9 +11,8 @@ export default async function Home() {
 
       <HeroSection />
 
-      {projects.map((project) => (
-        <ProjectCard key={project.slug} project={project} />
-      ))}
+      <ProjectSection />
+
     </>
   );
 }
