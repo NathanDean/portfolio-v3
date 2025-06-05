@@ -24,7 +24,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
-  @apply tracking-widest;
 }
 
 h1 {
@@ -33,4 +32,16 @@ h1 {
 
 h2 {
   @apply text-2xl tracking-widest;
+}
+
+p {
+  @apply tracking-widest
+}
+
+a {
+   @apply tracking-widest hover:text-white  transition duration-100
+}
+
+header a {
+  @apply text-2xl
 }

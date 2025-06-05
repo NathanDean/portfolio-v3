@@ -1,4 +1,5 @@
 import { client } from '@/sanity/lib/client';
+import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import ProjectCard from '@/components/ProjectCard';
 import Project from '@/types/Project';
@@ -11,6 +12,9 @@ export default async function Home() {
 
   return (
     <>
+
+      <Header />
+
       <HeroSection />
 
       {projects.map((project) => (

@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col justify-center items-center h-screen bg-[url('/water.jpg')] bg-cover bg-center bg-no-repeat">
-      <div className="w-3/4 md:w-2/5 space-y-4">
+    <section className="flex flex-col justify-center items-center h-screen -mt-16 bg-[url('/water.jpg')] bg-cover bg-center bg-no-repeat">
+      <div className="w-3/4 md:w-2/5 mt-8 space-y-4">
         <h1>Hi, I'm Nathan</h1>
 
         <h2>
