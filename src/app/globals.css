@@ -24,4 +24,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
+  @apply tracking-widest
+}
+
+h1 {
+  @apply text-5xl tracking-widest
+}
+
+h2 {
+  @apply text-2xl tracking-widest
 }
