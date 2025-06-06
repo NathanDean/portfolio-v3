@@ -28,7 +28,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4">
+      <div className="attribution absolute bottom-4 right-4">
         <p>
           Photo by{' '}
           <a href="https://unsplash.com/@marissar_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">

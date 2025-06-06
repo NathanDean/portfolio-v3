@@ -23,7 +23,7 @@ export default async function AboutSection(){
 
             </div>
 
-            <div className="absolute bottom-4 right-4">
+            <div className="attribution absolute bottom-4 right-4">
                 <p>
                     Photo by <a href="https://unsplash.com/@resul?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Resul Mentes</a> on <a href="https://unsplash.com/photos/white-clouds-and-blue-skies-DbwYNr8RPbg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
                 </p>
