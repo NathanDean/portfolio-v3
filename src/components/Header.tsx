@@ -50,7 +50,7 @@ export default function Header(){
         <Link className = "logo" href = "" onClick = {() => setIsMenuOpen(false)}>nathan dean</Link>
 
         {/* Full nav menu */}
-        <nav className = "hidden sm:flex space-x-6">
+        <nav className = "hidden md:flex space-x-6">
           
           <Link href = "">projects</Link>
           
@@ -61,7 +61,7 @@ export default function Header(){
 
         {/* Mobile menu button */}
 
-        <button className = "sm:hidden" onClick = {toggleMenu} aria-label = "Toggle menu">
+        <button className = "md:hidden" onClick = {toggleMenu} aria-label = "Toggle menu">
 
           <svg className = "w-6 h-6" fill = "none" stroke = "currentColor" viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg">
           
@@ -93,15 +93,15 @@ export default function Header(){
 
       {isMenuVisible && (
 
-        <div data-testid = "mobile-menu" className = {`${isMenuOpaque ? "opacity-100" : "opacity-0"} sm:hidden fixed inset-0 w-full h-screen p-6 transition-opacity duration-300 ease-in-out z-0 flex justify-center items-center bg-[var(--background)] text-[var(--foreground)]`}>
+        <div data-testid = "mobile-menu" className = {`${isMenuOpaque ? "opacity-100" : "opacity-0"} md:hidden fixed inset-0 w-full h-screen p-6 transition-opacity duration-300 ease-in-out z-0 flex justify-center items-center bg-[var(--background)] text-[var(--foreground)]`}>
 
           <div className = "fixed top-0 left-0 right-0 px-6 py-4">
 
             <div className = "flex justify-between items-center bg">
             
-              <Link href = "" onClick = {() => setIsMenuOpen(false)}>Nathan Dean</Link>
+              <Link href = "" onClick = {() => setIsMenuOpen(false)}>nathan dean</Link>
 
-              <button className = "sm:hidden" onClick = {toggleMenu} aria-label = "Toggle menu">
+              <button className = "md:hidden" onClick = {toggleMenu} aria-label = "Toggle menu">
 
                 <svg className = "w-6 h-6" fill = "none" stroke = "currentColor" viewBox = "0 0 24 24" xmlns = "http://www.w3.org/2000/svg">
                 
@@ -131,11 +131,11 @@ export default function Header(){
 
           </div>
 
-          <nav className = "flex flex-col justify-center h-1/2 space-y-6 text-2xl tracking-wider">
+          <nav className = "flex flex-col justify-center h-1/2 space-y-6">
 
-            <Link href = "" className = "text-center" onClick = {() => setIsMenuOpen(false)}>Projects</Link>
+            <Link href = "" className = "text-center" onClick = {() => setIsMenuOpen(false)}>projects</Link>
 
-            <Link href = "" className = "text-center" onClick = {() => setIsMenuOpen(false)}>About me</Link>
+            <Link href = "" className = "text-center" onClick = {() => setIsMenuOpen(false)}>about me</Link>
 
           </nav>
 
