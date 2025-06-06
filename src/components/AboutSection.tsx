@@ -12,7 +12,7 @@ export default async function AboutSection(){
 
     return(
 
-        <div className = "relative flex justify-center items-center min-h-screen p-10 bg-[url('/sky.jpg')] bg-cover bg-top bg-no-repeat">
+        <div className = "relative flex justify-center items-center min-h-screen pt-20 pb-25 bg-[url('/sky.jpg')] bg-cover bg-top bg-no-repeat">
 
             <div className = "w-5/8">
                 <h2 className = "sectionHeading">about me</h2>
