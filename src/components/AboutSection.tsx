@@ -12,7 +12,7 @@ export default async function AboutSection(){
 
     return(
 
-        <div className = "flex justify-center items-center min-h-screen p-10 bg-[url('/sky.jpg')] bg-cover bg-top bg-no-repeat">
+        <div className = "relative flex justify-center items-center min-h-screen p-10 bg-[url('/sky.jpg')] bg-cover bg-top bg-no-repeat">
 
             <div className = "w-5/8">
                 <h2 className = "sectionHeading">about me</h2>
@@ -21,6 +21,12 @@ export default async function AboutSection(){
                 <PortableText value = {bio} components = {components} />
                 </div>
 
+            </div>
+
+            <div className="absolute bottom-4 right-4">
+                <p>
+                    Photo by <a href="https://unsplash.com/@resul?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Resul Mentes</a> on <a href="https://unsplash.com/photos/white-clouds-and-blue-skies-DbwYNr8RPbg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                </p>
             </div>
         </div>
 
