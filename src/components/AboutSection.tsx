@@ -14,10 +14,10 @@ export default async function AboutSection(){
 
         <div className = "relative flex justify-center items-center min-h-screen pt-20 pb-25 bg-[url('/sky.jpg')] bg-cover bg-top bg-no-repeat">
 
-            <div className = "w-5/8">
+            <div className = "w-3/4 sm:w-5/8">
                 <h2 className = "sectionHeading">about me</h2>
 
-                <div className = "space-y-2 text-xl">                
+                <div className = "bio space-y-2">                
                 <PortableText value = {bio} components = {components} />
                 </div>
 

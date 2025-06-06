@@ -39,7 +39,7 @@ h3 {
 }
 
 .sectionHeading {
-  @apply w-full pb-8 text-2xl text-center underline underline-offset-10 decoration-1 decoration-dotted
+  @apply w-full pb-8 text-xl sm:text-2xl text-center underline underline-offset-10 decoration-1 decoration-dotted
 }
 
 p, span {
@@ -52,6 +52,10 @@ p, span {
 
 .description {
   @apply text-sm sm:text-base
+}
+
+.bio {
+  @apply text-base sm:text-xl
 }
 
 a {
