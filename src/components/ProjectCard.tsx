@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const components = createPortableTextComponents();
 
   return (
-    <Card key={project.slug} className = "flex flex-col sm:flex-row h-96">
+    <Card key={project.slug} className = "flex flex-col sm:flex-row sm:h-96">
         <div className = "w-full sm:w-1/2 relative">
           <Image 
             src = {urlFor(project.image).url()}
@@ -26,9 +26,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         </div>
 
-      <div className = "flex flex-col justify-between w-full p-6 sm:w-1/2 border-t border-gray-200 sm:border-l sm:border-t-0">
-        <div className = "space-y-1 md:space-y-2">
-          <h2>{project.name}</h2>
+      <div className = "flex flex-col justify-between w-full p-6 sm:w-1/2 space-y-4 border-t border-gray-200 sm:border-l sm:border-t-0">
+        <div className = "space-y-4">
+          <h3>{project.name}</h3>
 
           <div className = "flex flex-wrap gap-1 md:gap-2 text-sm">
             {project.tools.map(tool => (
@@ -36,7 +36,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
 
-          <PortableText value = {project.description} components = {components} />
+          <div className = "description">
+            <PortableText value = {project.description} components = {components} />
+          </div>
 
         </div>
 

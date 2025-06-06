@@ -34,6 +34,10 @@ h2 {
   @apply text-2xl tracking-widest;
 }
 
+h3 {
+  @apply text-xl sm:text-2xl tracking-widest
+}
+
 .sectionHeading {
   @apply w-full pb-8 text-2xl text-center underline underline-offset-10 decoration-1 decoration-dotted
 }
@@ -46,6 +50,10 @@ p, span {
   @apply max-w-1/2 text-sm text-right text-sky-950
 }
 
+.description {
+  @apply text-sm sm:text-base
+}
+
 a {
    @apply tracking-widest hover:text-white  transition duration-100
 }
@@ -55,5 +63,5 @@ header a {
 }
 
 .btn {
-  @apply p-2 border-1 border-sky-800 rounded-xl hover:bg-sky-900 text-lg text-center text-sky-800 hover:text-white
+  @apply p-2 border-1 border-sky-800 rounded-xl hover:bg-sky-900 text-sm sm:text-lg text-center text-sky-800 hover:text-white
 }
