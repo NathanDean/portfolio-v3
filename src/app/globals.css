@@ -26,46 +26,47 @@ body {
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  @apply text-5xl tracking-widest;
+.hero-heading {
+  @apply text-3xl sm:text-5xl tracking-widest;
 }
 
-h2 {
-  @apply text-2xl tracking-widest;
-}
-
-h3 {
-  @apply text-xl sm:text-2xl tracking-widest
+.hero-subheading {
+  @apply text-lg sm:text-2xl tracking-widest;
 }
 
 .sectionHeading {
-  @apply w-full pb-8 text-xl sm:text-2xl text-center underline underline-offset-10 decoration-1 decoration-dotted
+  @apply w-full pb-8 text-xl sm:text-2xl text-center tracking-widest underline underline-offset-10 decoration-1 decoration-dotted;
 }
 
-p, span {
-  @apply tracking-widest
+h3 {
+  @apply text-xl sm:text-2xl tracking-widest;
+}
+
+p,
+span {
+  @apply tracking-widest;
 }
 
 .attribution {
-  @apply max-w-1/2 text-sm text-right text-sky-950
+  @apply max-w-1/2 text-sm text-right text-sky-950;
 }
 
 .description {
-  @apply text-sm sm:text-base
+  @apply text-sm sm:text-base;
 }
 
 .bio {
-  @apply text-base sm:text-xl
+  @apply text-base sm:text-xl;
 }
 
 a {
-   @apply tracking-widest hover:text-white  transition duration-100
+  @apply tracking-widest hover:text-white  transition duration-100;
 }
 
 header a {
-  @apply text-2xl
+  @apply text-2xl;
 }
 
 .btn {
-  @apply p-2 border-1 border-sky-800 rounded-xl hover:bg-sky-900 text-sm sm:text-lg text-center text-sky-800 hover:text-white
+  @apply p-2 border-1 border-sky-800 rounded-xl hover:bg-sky-900 text-sm sm:text-lg text-center text-sky-800 hover:text-white;
 }

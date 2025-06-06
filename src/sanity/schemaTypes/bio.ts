@@ -10,10 +10,10 @@ export const bioType = defineType({
       type: 'array',
       of: [
         {
-          type: 'block'
-        }
+          type: 'block',
+        },
       ],
       validation: (rule) => rule.required(),
-    })
+    }),
   ],
 });

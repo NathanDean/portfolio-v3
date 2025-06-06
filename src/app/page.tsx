@@ -4,10 +4,8 @@ import HeroSection from '@/components/HeroSection';
 import ProjectSection from '@/components/ProjectSection';
 
 export default async function Home() {
-
   return (
     <>
-
       <Header />
 
       <HeroSection />
@@ -15,7 +13,6 @@ export default async function Home() {
       <ProjectSection />
 
       <AboutSection />
-
     </>
   );
 }

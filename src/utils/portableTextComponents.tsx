@@ -1,13 +1,11 @@
-import { PortableTextComponents } from "next-sanity"
+import { PortableTextComponents } from 'next-sanity';
 
-export default function createPortableTextComponents(){
+export default function createPortableTextComponents() {
+  const components: PortableTextComponents = {
+    block: {
+      normal: ({ children }) => <p>{children}</p>,
+    },
+  };
 
-    const components: PortableTextComponents = {
-        block: {
-            normal: ({ children }) => <p>{children}</p>,
-        }
-    }
-
-    return components
-
+  return components;
 }
