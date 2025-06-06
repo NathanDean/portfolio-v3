@@ -34,6 +34,10 @@ h2 {
   @apply text-2xl tracking-widest;
 }
 
+.sectionHeading {
+  @apply w-full pb-8 text-2xl text-center underline underline-offset-10 decoration-1 decoration-dotted
+}
+
 p, span {
   @apply tracking-widest
 }

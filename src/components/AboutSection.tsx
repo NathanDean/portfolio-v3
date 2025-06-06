@@ -14,10 +14,13 @@ export default async function AboutSection(){
 
         <div className = "flex justify-center items-center min-h-screen p-10 bg-blue-200">
 
-            <div className = "w-5/8 space-y-2 text-xl">
+            <div className = "w-5/8">
+                <h2 className = "sectionHeading">about me</h2>
 
+                <div className = "space-y-2 text-xl">                
                 <PortableText value = {bio} components = {components} />
-            
+                </div>
+
             </div>
         </div>
 
