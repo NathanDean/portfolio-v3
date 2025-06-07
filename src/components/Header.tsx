@@ -30,22 +30,54 @@ export default function Header() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const scrollToSection = (sectionId: string) => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <header className="sticky top-0 left-0 right-0 z-10 py-4 bg-transparent">
       <div className="px-6 flex justify-between items-center">
         <Link
           className="logo"
           href="#hero"
-          onClick={() => setIsMenuOpen(false)}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('hero');
+          }}
         >
           nathan dean
         </Link>
 
         {/* Full nav menu */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="#projects">projects</Link>
+          <Link
+            href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('projects');
+            }}
+          >
+            projects
+          </Link>
 
-          <Link href="#about">about me</Link>
+          <Link
+            href="#about"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('about');
+            }}
+          >
+            about me
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -92,7 +124,14 @@ export default function Header() {
         >
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
-              <Link href="#hero" onClick={() => setIsMenuOpen(false)}>
+              <Link
+                href="#hero"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('about');
+                  setIsMenuOpen(false);
+                }}
+              >
                 nathan dean
               </Link>
 
@@ -134,7 +173,11 @@ export default function Header() {
             <Link
               href="#projects"
               className="text-center"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('projects');
+                setIsMenuOpen(false);
+              }}
             >
               projects
             </Link>
@@ -142,7 +185,11 @@ export default function Header() {
             <Link
               href="#about"
               className="text-center"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('about');
+                setIsMenuOpen(false);
+              }}
             >
               about me
             </Link>
