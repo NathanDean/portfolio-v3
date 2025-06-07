@@ -53,7 +53,7 @@ span {
 }
 
 .bio {
-  @apply text-base sm:text-xl;
+  @apply text-sm sm:text-base;
 }
 
 a {
