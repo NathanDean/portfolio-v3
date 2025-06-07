@@ -65,5 +65,5 @@ header a {
 }
 
 .btn {
-  @apply p-2 border-1 border-sky-800 rounded-xl hover:bg-sky-900 text-sm sm:text-lg font-medium text-center text-sky-800 hover:text-white;
+  @apply p-2 border-1 sm:border-2 border-sky-800 rounded-xl hover:bg-sky-900 text-sm sm:text-lg font-medium text-center text-sky-800 hover:text-white;
 }
