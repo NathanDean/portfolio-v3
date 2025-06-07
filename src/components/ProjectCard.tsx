@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="space-y-4">
           <h3>{project.name}</h3>
 
-          <div className="flex flex-wrap gap-1 md:gap-2 text-sm">
+          <div className="flex flex-wrap gap-2 text-sm">
             {project.tools.map((tool) => (
               <span
                 key={tool}
