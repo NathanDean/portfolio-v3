@@ -33,15 +33,19 @@ export default function Header() {
   return (
     <header className="sticky top-0 left-0 right-0 z-10 py-4 bg-transparent">
       <div className="px-6 flex justify-between items-center">
-        <Link className="logo" href="" onClick={() => setIsMenuOpen(false)}>
+        <Link
+          className="logo"
+          href="#hero"
+          onClick={() => setIsMenuOpen(false)}
+        >
           nathan dean
         </Link>
 
         {/* Full nav menu */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="">projects</Link>
+          <Link href="#projects">projects</Link>
 
-          <Link href="">about me</Link>
+          <Link href="#about">about me</Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -88,7 +92,7 @@ export default function Header() {
         >
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
-              <Link href="" onClick={() => setIsMenuOpen(false)}>
+              <Link href="#hero" onClick={() => setIsMenuOpen(false)}>
                 nathan dean
               </Link>
 
@@ -128,7 +132,7 @@ export default function Header() {
 
           <nav className="flex flex-col justify-center h-1/2 space-y-6">
             <Link
-              href=""
+              href="#projects"
               className="text-center"
               onClick={() => setIsMenuOpen(false)}
             >
@@ -136,7 +140,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href=""
+              href="#about"
               className="text-center"
               onClick={() => setIsMenuOpen(false)}
             >
