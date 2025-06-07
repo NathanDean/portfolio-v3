@@ -45,7 +45,7 @@ span {
 }
 
 .attribution {
-  @apply max-w-1/2 text-sm text-right text-sky-950;
+  @apply max-w-1/2 text-xs sm:text-sm text-right text-sky-950;
 }
 
 .description {
