@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '@/sanity/lib/image';
-import Card from './Card';
 import Project from '@/types/Project';
 import createPortableTextComponents from '@/utils/portableTextComponents';
 
@@ -14,7 +13,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const components = createPortableTextComponents();
 
   return (
-    <Card key={project.slug} className="flex flex-col sm:flex-row sm:h-96">
+    <div key={project.slug} className="flex flex-col sm:flex-row sm:h-96">
       <div className="w-full sm:w-1/2 relative">
         <Image
           src={urlFor(project.image).url()}
@@ -25,7 +24,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         />
       </div>
 
-      <div className="flex flex-col justify-between w-full p-6 sm:w-1/2 space-y-4 border-t border-gray-200 sm:border-l sm:border-t-0">
+      <div className="flex flex-col justify-between w-full p-6 sm:w-1/2 space-y-4 border-t border-gray-200 sm:border-l sm:border-t-0 bg-white shadow-sm overflow-hidden">
         <div className="space-y-4">
           <h3>{project.name}</h3>
 
@@ -58,6 +57,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
