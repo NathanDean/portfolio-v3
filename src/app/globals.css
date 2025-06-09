@@ -28,7 +28,7 @@ body {
 }
 
 .hero-subheading {
-  @apply text-lg sm:text-2xl tracking-widest;
+  @apply text-lg sm:text-xl tracking-widest;
 }
 
 .sectionHeading {
