@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
 
-          <div className="description">
+          <div>
             <PortableText value={project.description} components={components} />
           </div>
         </div>

@@ -52,8 +52,8 @@ span {
   @apply text-sm sm:text-base;
 }
 
-.bio {
-  @apply text-sm sm:text-base;
+.pt-normal {
+  @apply text-base sm:text-lg;
 }
 
 a {
