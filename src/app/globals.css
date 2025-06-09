@@ -52,7 +52,7 @@ span {
   @apply text-sm sm:text-base;
 }
 
-.pt-normal {
+.bio {
   @apply text-base sm:text-lg;
 }
 
