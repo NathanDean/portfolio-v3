@@ -17,8 +17,12 @@ export const blogPostType = defineType({
     }),
     defineField({
       name: 'body',
-      type: 'string',
-      validation: (rule) => rule.required(),
+      type: 'array',
+      of: [
+        {
+          type: 'block',
+        },
+      ],
     }),
     defineField({
       name: 'publishedAt',
