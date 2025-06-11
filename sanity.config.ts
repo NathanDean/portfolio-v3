@@ -34,6 +34,8 @@ export default defineConfig({
               context,
             }),
             S.documentTypeListItem('tool').title('Tools'),
+            S.documentTypeListItem('blogPost').title('Blog posts'),
+            S.documentTypeListItem('tag').title('Tags'),
           ]);
       },
     }),
