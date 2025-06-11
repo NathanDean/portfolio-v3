@@ -12,7 +12,7 @@ export const blogPostType = defineType({
     }),
     defineField({
       name: 'slug',
-      type: 'string',
+      type: 'slug',
       validation: (rule) => rule.required(),
     }),
     defineField({
