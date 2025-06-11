@@ -3,7 +3,10 @@ import ProjectCard from './ProjectCard';
 import Project from '@/types/Project';
 
 export default async function ProjectSection() {
-  const PROJECTS_QUERY = `*[_type == "project"]|order(orderRank)`;
+  const PROJECTS_QUERY = `*[_type == "project"]|order(orderRank){
+    ...,
+    tools[]->
+  }`;
   const options = { next: { revalidate: 30 } };
   const projects = await client.fetch<Project[]>(PROJECTS_QUERY, {}, options);
 

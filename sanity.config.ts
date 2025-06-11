@@ -18,7 +18,7 @@ export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
-  // Add and edit the content schema in the './sanity/schemaTypes' folder
+  // Add and edit the content schema in the "./sanity/schemaTypes" folder
   schema,
   plugins: [
     structureTool({
@@ -26,13 +26,14 @@ export default defineConfig({
         return S.list()
           .title('Content')
           .items([
+            S.documentTypeListItem('bio').title('Bio'),
             orderableDocumentListDeskItem({
               type: 'project',
               title: 'Projects',
               S,
               context,
             }),
-            S.documentTypeListItem('bio').title('Bio'),
+            S.documentTypeListItem('tool').title('Tools'),
           ]);
       },
     }),

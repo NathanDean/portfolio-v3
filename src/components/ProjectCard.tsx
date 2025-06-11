@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '@/sanity/lib/image';
 import Project from '@/types/Project';
-import createPortableTextComponents from '@/utils/portableTextComponents';
+import createPortableTextComponents from '@/components/PortableText';
 
 interface ProjectCardProps {
   project: Project;
@@ -31,10 +31,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="flex flex-wrap gap-2 text-sm">
             {project.tools.map((tool) => (
               <span
-                key={tool}
+                key={tool.name}
                 className="px-2 py-1 md:px-4 md:py-2 border-1 border-gray-400 rounded-4xl"
               >
-                {tool}
+                {tool.name}
               </span>
             ))}
           </div>
