@@ -3,7 +3,9 @@ import { PortableTextComponents } from 'next-sanity';
 export default function createPortableTextComponents() {
   const components: PortableTextComponents = {
     block: {
-      normal: ({ children }) => <p className="text-inherit">{children}</p>,
+      normal: ({ children }) => (
+        <p className="portable-text text-inherit">{children}</p>
+      ),
     },
   };
 
