@@ -13,7 +13,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const components = createPortableTextComponents();
 
   return (
-    <div key={project.slug} className="flex flex-col sm:flex-row sm:h-96">
+    <div
+      key={project.slug.current}
+      className="flex flex-col sm:flex-row sm:h-96"
+    >
       <div className="w-full sm:w-1/2 relative">
         <Image
           src={urlFor(project.image).url()}
