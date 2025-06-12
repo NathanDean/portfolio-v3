@@ -1,11 +1,12 @@
 import { Image } from 'sanity';
+import { Slug } from 'sanity';
 import { SanityDocument } from 'next-sanity';
 import { PortableTextBlock } from 'next-sanity';
 import tool from './Tool';
 
 export default interface Project extends SanityDocument {
   name: string;
-  slug: string;
+  slug: Slug;
   image: Image;
   description: PortableTextBlock[];
   appLink?: string;
