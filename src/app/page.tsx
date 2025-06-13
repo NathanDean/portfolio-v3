@@ -6,8 +6,6 @@ import ProjectSection from '@/components/ProjectSection';
 export default async function Home() {
   return (
     <>
-      <Header />
-
       <HeroSection />
 
       <ProjectSection />

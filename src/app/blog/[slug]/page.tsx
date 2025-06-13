@@ -2,6 +2,7 @@ import { client } from '@/sanity/lib/client';
 import { PortableText } from '@portabletext/react';
 import createPortableTextComponents from '@/components/PortableText';
 import BlogPost from '@/types/BlogPost';
+
 export default async function blogPost({
   params,
 }: {

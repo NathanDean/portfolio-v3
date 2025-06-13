@@ -7,6 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMenuOpaque, setIsMenuOpaque] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -48,7 +49,7 @@ export default function Header() {
       <div className="px-6 flex justify-between items-center">
         <Link
           className="logo"
-          href="#hero"
+          href="/#hero"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection('hero');
