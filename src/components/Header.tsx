@@ -48,7 +48,7 @@ export default function Header() {
       <div className="px-6 flex justify-between items-center">
         <Link
           className="logo"
-          href="/#hero"
+          href="/#home"
           onClick={(e) => {
             if (
               typeof window !== 'undefined' &&
@@ -56,7 +56,7 @@ export default function Header() {
             ) {
               e.preventDefault();
             }
-            scrollToSection('hero');
+            scrollToSection('home');
           }}
         >
           nathan dean
@@ -140,7 +140,7 @@ export default function Header() {
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
               <Link
-                href="/#hero"
+                href="/#home"
                 onClick={(e) => {
                   if (
                     typeof window !== 'undefined' &&
@@ -148,7 +148,7 @@ export default function Header() {
                   ) {
                     e.preventDefault();
                   }
-                  scrollToSection('hero');
+                  scrollToSection('home');
                   setIsMenuOpen(false);
                 }}
               >

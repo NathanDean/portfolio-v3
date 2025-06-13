@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function HeroSection() {
   return (
     <section
-      id="hero"
+      id="home"
       className="flex flex-col justify-center items-center h-screen bg-[url('/water.jpg')] bg-cover bg-center bg-no-repeat"
     >
       <div className="w-3/4 md:w-2/5 mt-8 space-y-4">
