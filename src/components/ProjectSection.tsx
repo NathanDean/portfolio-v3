@@ -19,7 +19,7 @@ export default async function ProjectSection() {
 
       <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8 my-4">
         {projects.map((project) => (
-          <ProjectCard key={project.slug.current} project={project} />
+          <ProjectCard key={project._id} project={project} />
         ))}
       </div>
     </div>
