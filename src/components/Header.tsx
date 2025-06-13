@@ -7,7 +7,6 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMenuOpaque, setIsMenuOpaque] = useState(false);
-  const router = useRouter();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -51,7 +50,12 @@ export default function Header() {
           className="logo"
           href="/#hero"
           onClick={(e) => {
-            e.preventDefault();
+            if (
+              typeof window !== 'undefined' &&
+              window.location.pathname === '/'
+            ) {
+              e.preventDefault();
+            }
             scrollToSection('hero');
           }}
         >
@@ -61,9 +65,14 @@ export default function Header() {
         {/* Full nav menu */}
         <nav className="hidden md:flex space-x-6">
           <Link
-            href="#projects"
+            href="/#projects"
             onClick={(e) => {
-              e.preventDefault();
+              if (
+                typeof window !== 'undefined' &&
+                window.location.pathname === '/'
+              ) {
+                e.preventDefault();
+              }
               scrollToSection('projects');
             }}
           >
@@ -71,9 +80,14 @@ export default function Header() {
           </Link>
 
           <Link
-            href="#about"
+            href="/#about"
             onClick={(e) => {
-              e.preventDefault();
+              if (
+                typeof window !== 'undefined' &&
+                window.location.pathname === '/'
+              ) {
+                e.preventDefault();
+              }
               scrollToSection('about');
             }}
           >
@@ -126,10 +140,15 @@ export default function Header() {
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
               <Link
-                href="#hero"
+                href="/#hero"
                 onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection('about');
+                  if (
+                    typeof window !== 'undefined' &&
+                    window.location.pathname === '/'
+                  ) {
+                    e.preventDefault();
+                  }
+                  scrollToSection('hero');
                   setIsMenuOpen(false);
                 }}
               >
@@ -175,7 +194,12 @@ export default function Header() {
               href="#projects"
               className="text-center"
               onClick={(e) => {
-                e.preventDefault();
+                if (
+                  typeof window !== 'undefined' &&
+                  window.location.pathname === '/'
+                ) {
+                  e.preventDefault();
+                }
                 scrollToSection('projects');
                 setIsMenuOpen(false);
               }}
@@ -187,7 +211,12 @@ export default function Header() {
               href="#about"
               className="text-center"
               onClick={(e) => {
-                e.preventDefault();
+                if (
+                  typeof window !== 'undefined' &&
+                  window.location.pathname === '/'
+                ) {
+                  e.preventDefault();
+                }
                 scrollToSection('about');
                 setIsMenuOpen(false);
               }}
