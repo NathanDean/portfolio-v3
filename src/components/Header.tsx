@@ -93,6 +93,8 @@ export default function Header() {
           >
             about me
           </Link>
+
+          <Link href="/blog">blog</Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -223,6 +225,8 @@ export default function Header() {
             >
               about me
             </Link>
+
+            <Link href="/blog">blog</Link>
           </nav>
         </div>
       )}
