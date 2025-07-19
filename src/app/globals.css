@@ -73,9 +73,21 @@ header a {
 }
 
 .btn {
-  @apply p-2 border-1 sm:border-2 border-sky-800 rounded-xl hover:bg-sky-900 text-sm sm:text-lg font-medium text-center text-sky-800 hover:text-white;
+  @apply p-2 border sm:border-2 rounded-xl text-sm sm:text-lg font-medium text-center;
 }
 
-.btn-light {
-  @apply border-white hover:bg-white text-white hover:text-sky-800;
+.btn-blue {
+  @apply border-sky-800 hover:bg-sky-900 text-sky-800 hover:text-white;
+}
+
+.btn-dark {
+  @apply border-sky-900 hover:border-white bg-sky-900 hover:bg-white text-white hover:text-sky-900;
+}
+
+.container {
+  @apply w-3/4 sm:w-5/8;
+}
+
+.post-card {
+  @apply pb-20 space-y-4;
 }

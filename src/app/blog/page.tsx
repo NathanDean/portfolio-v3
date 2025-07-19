@@ -17,19 +17,25 @@ export default async function blog() {
   const components = createPortableTextComponents();
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen px-10 py-20 md:py-10 bg-sky-900 light-text">
-      <div className="w-9/10 sm:w-2/3">
+    <div className="flex flex-col justify-center items-center min-h-screen px-10 py-20 md:py-10 bg-sky-200">
+      <div className="container pt-20">
         {posts.map((post) => (
-          <div key={post.slug.current} className="blog-card py-4 space-y-4">
+          <div key={post.slug.current} className="post-card pb-20">
             <h2 className="post-heading">{post.title}</h2>
 
             <PortableText
               value={getPostPreview(post.body)}
               components={components}
             />
-            <Link href={`/blog/${post.slug.current}`} className="btn btn-light">
-              Read more
-            </Link>
+            <span>...</span>
+            <div className="mt-8">
+              <Link
+                href={`/blog/${post.slug.current}`}
+                className="btn btn-dark bg-white-100"
+              >
+                Read more
+              </Link>
+            </div>
           </div>
         ))}
       </div>
