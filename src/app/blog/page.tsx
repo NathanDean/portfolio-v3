@@ -24,9 +24,9 @@ export default async function blog() {
         {posts.map((post) => (
           <div key={post.slug.current} className="post-card pb-20">
             <div className="flex flex-col xl:flex-row items-center pb-8 border-b border-dotted">
-              <div>
+              <div className="mb-4 xl:mb-0 xl:mr-8">
                 <Link href={`/blog/${post.slug.current}`}>
-                  <h2 className="post-heading mb-4">{post.title}</h2>
+                  <h2 className="post-heading xl:mb-4">{post.title}</h2>
                 </Link>
                 <p>Posted {new Date(post.publishedAt).toLocaleDateString()}</p>
               </div>
