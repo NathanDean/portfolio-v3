@@ -4,6 +4,8 @@ import { PortableText } from '@portabletext/react';
 import { PortableTextBlock } from '@portabletext/types';
 import createPortableTextComponents from '@/components/PortableText';
 import Link from 'next/link';
+import Image from 'next/image';
+import { urlFor } from '@/sanity/lib/image';
 
 export default async function blog() {
   const BLOG_POSTS_QUERY = `*[_type == "blogPost"]`;
@@ -17,11 +19,21 @@ export default async function blog() {
   const components = createPortableTextComponents();
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen px-10 py-20 md:py-10 bg-sky-200">
+    <div className="flex flex-col justify-center items-center min-h-screen py-20 md:py-10 bg-sky-200">
       <div className="container pt-20">
         {posts.map((post) => (
           <div key={post.slug.current} className="post-card pb-20">
-            <h2 className="post-heading">{post.title}</h2>
+            <div className="flex flex-col xl:flex-row items-center pb-8 border-b border-dotted">
+              <h2 className="post-heading mb-4">{post.title}</h2>
+
+              <Image
+                src={urlFor(post.image).url()}
+                alt=""
+                width={400}
+                height={400}
+                className=""
+              />
+            </div>
 
             <PortableText
               value={getPostPreview(post.body)}

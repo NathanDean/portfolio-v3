@@ -2,6 +2,8 @@ import { client } from '@/sanity/lib/client';
 import { PortableText } from '@portabletext/react';
 import createPortableTextComponents from '@/components/PortableText';
 import Link from 'next/link';
+import Image from 'next/image';
+import { urlFor } from '@/sanity/lib/image';
 import BlogPost from '@/types/BlogPost';
 
 export default async function blogPost({
@@ -16,11 +18,21 @@ export default async function blogPost({
   const components = createPortableTextComponents();
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen px-10 py-20 md:py-10 bg-sky-200">
+    <div className="flex flex-col justify-center items-center min-h-screen py-20 md:py-10 bg-sky-200">
       {post ? (
         <div className="container py-20">
           <div className="post-card">
-            <h1 className="post-heading">{post.title}</h1>
+            <div className="flex flex-col xl:flex-row items-center pb-8 border-b border-dotted">
+              <h1 className="post-heading mb-4">{post.title}</h1>
+
+              <Image
+                src={urlFor(post.image).url()}
+                alt=""
+                width={400}
+                height={400}
+                className=""
+              />
+            </div>
             <PortableText value={post.body} components={components} />
           </div>
           <Link className="w-2/3 btn btn-dark bg-white-100" href="/blog">
