@@ -6,6 +6,11 @@ export default function createPortableTextComponents() {
       normal: ({ children }) => (
         <p className="portable-text text-inherit">{children}</p>
       ),
+      h3: ({ children }) => (
+        <h3 className="portable-text text-inherit post-subheading">
+          {children}
+        </h3>
+      ),
     },
   };
 

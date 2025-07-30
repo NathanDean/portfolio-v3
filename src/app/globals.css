@@ -36,7 +36,11 @@ body {
 }
 
 .post-heading {
-  @apply pb-4 text-lg sm:text-xl tracking-widest underline underline-offset-10 decoration-1 decoration-dotted;
+  @apply pb-4 xl:pb-0 text-xl sm:text-2xl tracking-widest underline underline-offset-10 decoration-1 decoration-dotted;
+}
+
+.post-subheading {
+  @apply pt-4 text-lg tracking-widest underline underline-offset-5 decoration-1 decoration-dotted;
 }
 
 h3 {
