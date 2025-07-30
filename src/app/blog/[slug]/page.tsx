@@ -23,8 +23,10 @@ export default async function blogPost({
         <div className="container py-20">
           <div className="post-card">
             <div className="flex flex-col xl:flex-row items-center pb-8 border-b border-dotted">
-              <h1 className="post-heading mb-4">{post.title}</h1>
-
+              <div>
+                <h1 className="post-heading mb-4">{post.title}</h1>
+                <p>Posted {new Date(post.publishedAt).toLocaleDateString()}</p>
+              </div>
               <Image
                 src={urlFor(post.image).url()}
                 alt=""
