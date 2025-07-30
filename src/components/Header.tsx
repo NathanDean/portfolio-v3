@@ -193,7 +193,7 @@ export default function Header() {
 
           <nav className="flex flex-col justify-center h-1/2 space-y-6">
             <Link
-              href="#projects"
+              href="/#projects"
               className="text-center"
               onClick={(e) => {
                 if (
@@ -210,7 +210,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="#about"
+              href="/#about"
               className="text-center"
               onClick={(e) => {
                 if (
@@ -226,7 +226,13 @@ export default function Header() {
               about me
             </Link>
 
-            <Link href="/blog">blog</Link>
+            <Link
+              href="/blog"
+              className="text-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              blog
+            </Link>
           </nav>
         </div>
       )}
