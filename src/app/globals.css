@@ -32,15 +32,15 @@ body {
 }
 
 .sectionHeading {
-  @apply w-full pb-8 text-xl sm:text-2xl text-center tracking-widest underline underline-offset-10 decoration-1 decoration-dotted;
+  @apply w-full pb-8 text-xl sm:text-2xl text-center tracking-widest leading-10 underline underline-offset-10 decoration-1 decoration-dotted;
 }
 
 .post-heading {
-  @apply pb-4 xl:pb-0 text-xl sm:text-2xl tracking-widest underline underline-offset-10 decoration-1 decoration-dotted;
+  @apply pb-4 xl:pb-0 text-xl sm:text-2xl tracking-widest leading-10 underline underline-offset-10 decoration-1 decoration-dotted;
 }
 
 .post-subheading {
-  @apply pt-4 text-lg tracking-widest underline underline-offset-5 decoration-1 decoration-dotted;
+  @apply pt-4 text-lg tracking-widest leading-7 underline underline-offset-5 decoration-1 decoration-dotted;
 }
 
 h3 {
