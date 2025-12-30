@@ -12,8 +12,8 @@ export default function HeroSection() {
         <h1 className="hero-heading">Hi, {`I'm`} Nathan</h1>
 
         <h2 className="hero-subheading">
-          MSc Computer Science w/ AI student with a background in creative
-          industries communications.
+          Computer Science + AI grad with a background in creative industries
+          communications.
         </h2>
 
         <div className="flex items-center space-x-6">

@@ -35,7 +35,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.tools.map((tool) => (
               <span
                 key={tool.name}
-                className="px-2 py-1 md:px-4 md:py-2 border-1 border-gray-400 rounded-4xl"
+                className="px-3 py-2 md:px-4 md:py-2 border-1 border-gray-400 rounded-4xl"
               >
                 {tool.name}
               </span>

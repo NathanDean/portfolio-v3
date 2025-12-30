@@ -65,7 +65,7 @@ span {
 }
 
 a {
-  @apply tracking-widest hover:text-sky-800 transition duration-100;
+  @apply tracking-widest hover:text-sky-700 transition duration-100;
 }
 
 header a {
@@ -81,7 +81,7 @@ header a {
 }
 
 .btn-blue {
-  @apply border-sky-800 hover:bg-sky-900 text-sky-800 hover:text-white;
+  @apply border-sky-900 hover:border-sky-900 hover:bg-sky-900 text-sky-900 hover:text-white;
 }
 
 .btn-dark {
