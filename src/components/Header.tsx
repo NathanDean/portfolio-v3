@@ -94,7 +94,20 @@ export default function Header() {
             about me
           </Link>
 
-          <Link href="/blog">blog</Link>
+          <Link
+            href="/#contact"
+            onClick={(e) => {
+              if (
+                typeof window !== 'undefined' &&
+                window.location.pathname === '/'
+              ) {
+                e.preventDefault();
+              }
+              scrollToSection('contact');
+            }}
+          >
+            get in touch
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -224,14 +237,6 @@ export default function Header() {
               }}
             >
               about me
-            </Link>
-
-            <Link
-              href="/blog"
-              className="text-center"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              blog
             </Link>
 
             <Link
