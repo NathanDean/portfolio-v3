@@ -16,7 +16,10 @@ export default function HeroSection() {
           industries communications.
         </h2>
 
-        <div className="flex space-x-6">
+        <div className="flex items-center space-x-6">
+          <Link href="" className="btn btn-hero hidden sm:inline">
+            Get in touch
+          </Link>
           <Link
             href="https://github.com/nathandean"
             className="flex flex-col justify-center"
