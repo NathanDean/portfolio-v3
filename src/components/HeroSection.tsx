@@ -1,4 +1,5 @@
-import { Github, Linkedin } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 
 export default function HeroSection() {
@@ -15,18 +16,18 @@ export default function HeroSection() {
           industries communications.
         </h2>
 
-        <div className="flex space-x-4">
-          <Link href="https://github.com/nathandean">
-            <Github
-              size={35}
-              className="hover:text-white transition duration-100"
-            />
+        <div className="flex space-x-6">
+          <Link
+            href="https://github.com/nathandean"
+            className="flex flex-col justify-center"
+          >
+            <FontAwesomeIcon icon={faGithub} className="w-9 sm:w-11" />
           </Link>
-          <Link href="https://www.linkedin.com/in/nathanjdean/">
-            <Linkedin
-              size={35}
-              className="hover:text-white transition duration-100"
-            />
+          <Link
+            href="https://www.linkedin.com/in/nathanjdean/"
+            className="flex flex-col justify-center"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="w-9 sm:w-11" />
           </Link>
         </div>
       </div>
