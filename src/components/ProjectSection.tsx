@@ -13,7 +13,7 @@ export default async function ProjectSection() {
   return (
     <div
       id="projects"
-      className="flex flex-col justify-center items-center min-h-screen px-10 py-20 md:py-10  bg-sky-900"
+      className="flex flex-col justify-center items-center min-h-screen px-10 py-20 bg-sky-800"
     >
       <h2 className="sectionHeading text-white">selected projects</h2>
 

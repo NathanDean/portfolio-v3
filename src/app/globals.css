@@ -24,7 +24,7 @@ body {
 }
 
 .navbackground {
-  @apply absolute inset-0 backdrop-blur-xs [mask-image:linear-gradient(to_bottom,black_60%,transparent)] pointer-events-none;
+  @apply absolute inset-0 h-32 backdrop-blur-xs [mask-image:linear-gradient(to_bottom,black_20%,transparent)] pointer-events-none;
 }
 
 .navtext {
@@ -105,18 +105,18 @@ header a {
 }
 
 form {
-  @apply flex flex-col space-y-4 sm:text-xl tracking-widest;
+  @apply flex flex-col space-y-4 md:w-1/2 sm:border-3 sm:p-12 sm:bg-slate-200 text-lg sm:text-xl tracking-widest;
 }
 
-form {
-  @apply text-lg sm:text-xl;
+form label {
+  @apply text-white sm:text-[var(--foreground)];
 }
 
 form input,
 form textarea {
-  @apply border-1 sm:border-3 p-3;
+  @apply border-1 sm:border-3 p-3 bg-white;
 }
 
 form button {
-  @apply p-2 border sm:border-3 hover:border-gray-900 hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
+  @apply p-2 border sm:border-3 hover:border-gray-900 bg-white hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
 }
