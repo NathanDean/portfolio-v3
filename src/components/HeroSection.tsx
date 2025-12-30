@@ -17,7 +17,7 @@ export default function HeroSection() {
         </h2>
 
         <div className="flex items-center space-x-6">
-          <Link href="" className="btn btn-hero hidden sm:inline">
+          <Link href="#contact" className="btn btn-hero hidden sm:inline">
             Get in touch
           </Link>
           <Link

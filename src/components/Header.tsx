@@ -233,6 +233,23 @@ export default function Header() {
             >
               blog
             </Link>
+
+            <Link
+              href="/#contact"
+              className="text-center"
+              onClick={(e) => {
+                if (
+                  typeof window !== 'undefined' &&
+                  window.location.pathname === '/'
+                ) {
+                  e.preventDefault();
+                }
+                scrollToSection('contact');
+                setIsMenuOpen(false);
+              }}
+            >
+              get in touch
+            </Link>
           </nav>
         </div>
       )}

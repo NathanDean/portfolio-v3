@@ -99,3 +99,20 @@ header a {
 .post-card {
   @apply pb-20 space-y-4;
 }
+
+form {
+  @apply flex flex-col space-y-4 sm:text-xl tracking-widest;
+}
+
+form {
+  @apply text-lg sm:text-xl;
+}
+
+form input,
+form textarea {
+  @apply border-1 sm:border-3 p-3;
+}
+
+form button {
+  @apply p-2 border sm:border-3 hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
+}
