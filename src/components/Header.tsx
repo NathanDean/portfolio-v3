@@ -45,27 +45,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 left-0 right-0 z-10 py-4 bg-transparent">
-      <div className="px-6 flex justify-between items-center">
-        <Link
-          className="logo"
-          href="/#home"
-          onClick={(e) => {
-            if (
-              typeof window !== 'undefined' &&
-              window.location.pathname === '/'
-            ) {
-              e.preventDefault();
-            }
-            scrollToSection('home');
-          }}
-        >
-          nathan dean
-        </Link>
+      <div className="navbackground" />
 
-        {/* Full nav menu */}
-        <nav className="hidden md:flex space-x-6">
+      <div className="navtext">
+        <div className="px-6 flex justify-between items-center">
           <Link
-            href="/#projects"
+            className="logo"
+            href="/#home"
             onClick={(e) => {
               if (
                 typeof window !== 'undefined' &&
@@ -73,76 +59,94 @@ export default function Header() {
               ) {
                 e.preventDefault();
               }
-              scrollToSection('projects');
+              scrollToSection('home');
             }}
           >
-            projects
+            nathan dean
           </Link>
 
-          <Link
-            href="/#about"
-            onClick={(e) => {
-              if (
-                typeof window !== 'undefined' &&
-                window.location.pathname === '/'
-              ) {
-                e.preventDefault();
-              }
-              scrollToSection('about');
-            }}
-          >
-            about me
-          </Link>
+          {/* Full nav menu */}
+          <nav className="hidden md:flex space-x-6">
+            <Link
+              href="/#projects"
+              onClick={(e) => {
+                if (
+                  typeof window !== 'undefined' &&
+                  window.location.pathname === '/'
+                ) {
+                  e.preventDefault();
+                }
+                scrollToSection('projects');
+              }}
+            >
+              projects
+            </Link>
 
-          <Link
-            href="/#contact"
-            onClick={(e) => {
-              if (
-                typeof window !== 'undefined' &&
-                window.location.pathname === '/'
-              ) {
-                e.preventDefault();
-              }
-              scrollToSection('contact');
-            }}
-          >
-            get in touch
-          </Link>
-        </nav>
+            <Link
+              href="/#about"
+              onClick={(e) => {
+                if (
+                  typeof window !== 'undefined' &&
+                  window.location.pathname === '/'
+                ) {
+                  e.preventDefault();
+                }
+                scrollToSection('about');
+              }}
+            >
+              about me
+            </Link>
 
-        {/* Mobile menu button */}
+            <Link
+              href="/#contact"
+              onClick={(e) => {
+                if (
+                  typeof window !== 'undefined' &&
+                  window.location.pathname === '/'
+                ) {
+                  e.preventDefault();
+                }
+                scrollToSection('contact');
+              }}
+            >
+              get in touch
+            </Link>
+          </nav>
 
-        <button
-          className="md:hidden"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+          {/* Mobile menu button */}
+
+          <button
+            className="md:hidden"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? (
-              // X icon when menu is open
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              // Hamburger icon when menu is closed
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {isMenuOpen ? (
+                // X icon when menu is open
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                // Hamburger icon when menu is closed
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile dropdown menu */}
