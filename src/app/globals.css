@@ -52,7 +52,11 @@ body {
 }
 
 h3 {
-  @apply text-xl sm:text-2xl tracking-widest;
+  @apply text-xl sm:text-2xl font-medium tracking-widest;
+}
+
+h4 {
+  @apply text-lg sm:text-xl tracking-widest font-medium;
 }
 
 p,
@@ -119,4 +123,12 @@ form textarea {
 
 form button {
   @apply p-2 border sm:border-3 hover:border-gray-900 bg-white hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
+}
+
+.overview-card {
+  @apply flex flex-col items-center bg-white;
+}
+
+.overview-text {
+  @apply flex flex-col items-center p-4;
 }
