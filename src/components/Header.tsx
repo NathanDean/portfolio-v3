@@ -52,9 +52,9 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 left-0 right-0 z-10 py-4 bg-transparent">
-      <div className="navbackground" />
+      <div className="nav-background" />
 
-      <div className="navtext">
+      <div className="nav-text-container">
         <div className="px-6 flex justify-between items-center">
           <Link
             className="logo"

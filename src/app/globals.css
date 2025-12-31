@@ -23,11 +23,11 @@ body {
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
 }
 
-.navbackground {
+.nav-background {
   @apply absolute inset-0 h-24 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,black_0%,black_30%,rgba(0,0,0,0.8)_60%,transparent_100%)] pointer-events-none;
 }
 
-.navtext {
+.nav-text-container {
   @apply relative;
 }
 
