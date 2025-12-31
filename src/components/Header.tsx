@@ -75,10 +75,11 @@ export default function Header() {
 
           {/* Full nav menu */}
 
-          <nav className="hidden lg:flex space-x-6">
+          <nav className="hidden lg:flex space-x-10">
             {sections.map((section) => (
               <Link
                 key={section.title}
+                className="nav-link"
                 href={`/#${section.title}`}
                 onClick={(e) => {
                   if (
@@ -141,6 +142,7 @@ export default function Header() {
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
               <Link
+                className="logo"
                 href="/#home"
                 onClick={(e) => {
                   if (
@@ -195,8 +197,8 @@ export default function Header() {
             {sections.map((section) => (
               <Link
                 key={section.title}
+                className="nav-link"
                 href={`${section.title}`}
-                className="text-center"
                 onClick={(e) => {
                   if (
                     typeof window !== 'undefined' &&

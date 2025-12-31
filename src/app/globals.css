@@ -31,6 +31,14 @@ body {
   @apply relative;
 }
 
+.logo {
+  @apply text-2xl;
+}
+
+.nav-link {
+  @apply text-xl text-center;
+}
+
 .hero-heading {
   @apply text-3xl sm:text-5xl tracking-widest;
 }

@@ -21,7 +21,7 @@ export default function OverviewCard({
         className="w-full h-64 px-10 object-contain"
       />
       <div className="overview-text">
-        <h4>{title}</h4>
+        <h4 className="pb-2">{title}</h4>
         <p>{subtitle}</p>
       </div>
     </div>
