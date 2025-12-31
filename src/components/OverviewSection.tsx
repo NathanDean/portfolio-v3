@@ -10,13 +10,13 @@ export default function OverviewSection() {
       <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8 my-4">
         <OverviewCard
           imageUrl="/uoy.png"
-          title="MSc Computer Science with Artificial Intelligence"
-          subtitle="University of York, 2023 - 2025"
+          title="MSc Computer Science with Artificial Intelligence, 2023 - 2025"
+          subtitle="University of York"
         />
         <OverviewCard
           imageUrl="/ioc.png"
-          title="Web Development Bootcamp"
-          subtitle="Bath Spa University + The Institute of Coding, 2022"
+          title="Web Development Bootcamp, 2022"
+          subtitle="Bath Spa University + The Institute of Coding"
         />
         <OverviewCard
           imageUrl="/logos.png"
@@ -30,12 +30,12 @@ export default function OverviewSection() {
         />
         <OverviewCard
           imageUrl="/artscouncil.png"
-          title="Arts Council England, 2018 - 2024"
+          title="Communications at Arts Council England, 2018 - 2024"
           subtitle="Arts + tech comms lead, data storytelling, copywriting"
         />
         <OverviewCard
           imageUrl="/avalon.png"
-          title="Avalon Management Group, 2014 - 2018"
+          title="Publicity at Avalon Management Group, 2014 - 2018"
           subtitle="Comms strategy, media relations"
         />
       </div>
