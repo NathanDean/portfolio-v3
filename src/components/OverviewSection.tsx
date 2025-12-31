@@ -2,7 +2,10 @@ import OverviewCard from './OverviewCard';
 
 export default function OverviewSection() {
   return (
-    <section className="flex flex-col justify-center items-center min-h-screen px-10 py-20 bg-sky-800">
+    <section
+      id="overview"
+      className="flex flex-col justify-center items-center min-h-screen px-10 py-20 bg-sky-800"
+    >
       <h2 className="sectionHeading text-white">at a glance</h2>
       <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8 my-4">
         <OverviewCard

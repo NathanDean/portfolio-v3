@@ -43,6 +43,13 @@ export default function Header() {
     }
   };
 
+  const sections = [
+    { navText: 'at a glance', title: 'overview' },
+    { navText: 'projects', title: 'projects' },
+    { navText: 'about me', title: 'about' },
+    { navText: 'get in touch', title: 'contact' },
+  ];
+
   return (
     <header className="sticky top-0 left-0 right-0 z-10 py-4 bg-transparent">
       <div className="navbackground" />
@@ -67,51 +74,25 @@ export default function Header() {
           </Link>
 
           {/* Full nav menu */}
+
           <nav className="hidden lg:flex space-x-6">
-            <Link
-              href="/#projects"
-              onClick={(e) => {
-                if (
-                  typeof window !== 'undefined' &&
-                  window.location.pathname === '/'
-                ) {
-                  e.preventDefault();
-                }
-                scrollToSection('projects');
-              }}
-            >
-              projects
-            </Link>
-
-            <Link
-              href="/#about"
-              onClick={(e) => {
-                if (
-                  typeof window !== 'undefined' &&
-                  window.location.pathname === '/'
-                ) {
-                  e.preventDefault();
-                }
-                scrollToSection('about');
-              }}
-            >
-              about me
-            </Link>
-
-            <Link
-              href="/#contact"
-              onClick={(e) => {
-                if (
-                  typeof window !== 'undefined' &&
-                  window.location.pathname === '/'
-                ) {
-                  e.preventDefault();
-                }
-                scrollToSection('contact');
-              }}
-            >
-              get in touch
-            </Link>
+            {sections.map((section) => (
+              <Link
+                key={section.title}
+                href={`/#${section.title}`}
+                onClick={(e) => {
+                  if (
+                    typeof window !== 'undefined' &&
+                    window.location.pathname === '/'
+                  ) {
+                    e.preventDefault();
+                  }
+                  scrollToSection(section.title);
+                }}
+              >
+                {section.navText}
+              </Link>
+            ))}
           </nav>
 
           {/* Mobile menu button */}
@@ -211,56 +192,25 @@ export default function Header() {
           </div>
 
           <nav className="flex flex-col justify-center h-1/2 space-y-6">
-            <Link
-              href="/#projects"
-              className="text-center"
-              onClick={(e) => {
-                if (
-                  typeof window !== 'undefined' &&
-                  window.location.pathname === '/'
-                ) {
-                  e.preventDefault();
-                }
-                scrollToSection('projects');
-                setIsMenuOpen(false);
-              }}
-            >
-              projects
-            </Link>
-
-            <Link
-              href="/#about"
-              className="text-center"
-              onClick={(e) => {
-                if (
-                  typeof window !== 'undefined' &&
-                  window.location.pathname === '/'
-                ) {
-                  e.preventDefault();
-                }
-                scrollToSection('about');
-                setIsMenuOpen(false);
-              }}
-            >
-              about me
-            </Link>
-
-            <Link
-              href="/#contact"
-              className="text-center"
-              onClick={(e) => {
-                if (
-                  typeof window !== 'undefined' &&
-                  window.location.pathname === '/'
-                ) {
-                  e.preventDefault();
-                }
-                scrollToSection('contact');
-                setIsMenuOpen(false);
-              }}
-            >
-              get in touch
-            </Link>
+            {sections.map((section) => (
+              <Link
+                key={section.title}
+                href={`${section.title}`}
+                className="text-center"
+                onClick={(e) => {
+                  if (
+                    typeof window !== 'undefined' &&
+                    window.location.pathname === '/'
+                  ) {
+                    e.preventDefault();
+                  }
+                  scrollToSection(section.title);
+                  setIsMenuOpen(false);
+                }}
+              >
+                {section.navText}
+              </Link>
+            ))}
           </nav>
         </div>
       )}
