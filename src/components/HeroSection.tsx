@@ -29,12 +29,16 @@ export default async function HeroSection() {
             <a
               href="https://github.com/nathandean"
               className="flex flex-col justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faGithub} className="w-9 sm:w-12" />
             </a>
             <a
               href="https://www.linkedin.com/in/nathanjdean/"
               className="flex flex-col justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faLinkedin} className="h-9 sm:h-14" />
             </a>
@@ -53,11 +57,19 @@ export default async function HeroSection() {
       <div className="attribution absolute bottom-4 right-4">
         <p>
           Photo by{' '}
-          <a href="https://unsplash.com/@marissar_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <a
+            href="https://unsplash.com/@marissar_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Marissa Rodriguez
           </a>{' '}
           on{' '}
-          <a href="https://unsplash.com/photos/light-reflected-on-water-at-daytime-2mKYEVGA4jE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <a
+            href="https://unsplash.com/photos/light-reflected-on-water-at-daytime-2mKYEVGA4jE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Unsplash
           </a>
         </p>

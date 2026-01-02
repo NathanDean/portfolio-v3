@@ -25,11 +25,19 @@ export default async function AboutSection() {
       <div className="attribution absolute bottom-4 right-4">
         <p>
           Photo by{' '}
-          <a href="https://unsplash.com/@resul?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <a
+            href="https://unsplash.com/@resul?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resul Mentes
           </a>{' '}
           on{' '}
-          <a href="https://unsplash.com/photos/white-clouds-and-blue-skies-DbwYNr8RPbg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+          <a
+            href="https://unsplash.com/photos/white-clouds-and-blue-skies-DbwYNr8RPbg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Unsplash
           </a>
         </p>

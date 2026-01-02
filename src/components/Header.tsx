@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,7 +56,7 @@ export default function Header() {
 
       <div className="nav-text-container">
         <div className="px-6 flex justify-between items-center">
-          <a
+          <Link
             className="logo"
             href="/#home"
             onClick={(e) => {
@@ -70,13 +71,13 @@ export default function Header() {
           >
             <span className="sm:hidden">nd</span>
             <span className="hidden sm:inline-block">nathan dean</span>
-          </a>
+          </Link>
 
           {/* Full nav menu */}
 
           <nav className="hidden lg:flex space-x-10">
             {sections.map((section) => (
-              <a
+              <Link
                 key={section.title}
                 className="nav-link"
                 href={`/#${section.title}`}
@@ -91,7 +92,7 @@ export default function Header() {
                 }}
               >
                 {section.navText}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -140,7 +141,7 @@ export default function Header() {
         >
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
-              <a
+              <Link
                 className="logo"
                 href="/#home"
                 onClick={(e) => {
@@ -156,7 +157,7 @@ export default function Header() {
               >
                 <span className="sm:hidden">nd</span>
                 <span className="hidden sm:inline-block">nathan dean</span>
-              </a>
+              </Link>
 
               <button
                 className="lg:hidden"
@@ -194,7 +195,7 @@ export default function Header() {
 
           <nav className="flex flex-col justify-center h-1/2 space-y-6">
             {sections.map((section) => (
-              <a
+              <Link
                 key={section.title}
                 className="nav-link"
                 href={`${section.title}`}
@@ -210,7 +211,7 @@ export default function Header() {
                 }}
               >
                 {section.navText}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

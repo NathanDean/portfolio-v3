@@ -48,12 +48,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="flex gap-2">
           {project.gitHubLink && (
-            <a className="btn btn-blue w-1/2" href={project.gitHubLink}>
+            <a
+              className="btn btn-blue w-1/2"
+              href={project.gitHubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GitHub
             </a>
           )}
           {project.appLink && (
-            <a className="btn btn-blue w-1/2" href={project.appLink}>
+            <a
+              className="btn btn-blue w-1/2"
+              href={project.appLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View app
             </a>
           )}
