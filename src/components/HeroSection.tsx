@@ -5,6 +5,13 @@ import Link from 'next/link';
 import CV from '@/types/cv';
 
 export default async function HeroSection() {
+  const CV_URL_QUERY = `*[_type == "cv"][0]{
+    "url": file.asset->url
+  }`;
+  const options = { next: { revalidate: 30 } };
+  const { url } = await client.fetch<CV>(CV_URL_QUERY, {}, options);
+  console.log(url);
+
   return (
     <section
       id="home"
@@ -18,19 +25,29 @@ export default async function HeroSection() {
           communications.
         </h2>
 
-        <div className="flex items-center space-x-6">
-          <Link
-            href="https://github.com/nathandean"
-            className="flex flex-col justify-center"
+        <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+          <div className="flex flex-row space-x-6">
+            <Link
+              href="https://github.com/nathandean"
+              className="flex flex-col justify-center"
+            >
+              <FontAwesomeIcon icon={faGithub} className="w-9 sm:w-12" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/nathanjdean/"
+              className="flex flex-col justify-center"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="h-9 sm:h-14" />
+            </Link>
+          </div>
+          <a
+            className="btn btn-hero"
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} className="w-9 sm:w-11" />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/in/nathanjdean/"
-            className="flex flex-col justify-center"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="w-9 sm:w-11" />
-          </Link>
+            Download CV
+          </a>
         </div>
       </div>
 

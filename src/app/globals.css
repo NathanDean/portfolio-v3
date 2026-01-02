@@ -108,6 +108,10 @@ header a {
   @apply border-sky-900 bg-sky-900 hover:bg-white text-white hover:text-sky-900;
 }
 
+.btn-hero {
+  @apply rounded-sm hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)];
+}
+
 .container {
   @apply w-3/4 sm:w-5/8;
 }
