@@ -26,6 +26,7 @@ export default defineConfig({
           .title('Content')
           .items([
             S.documentTypeListItem('bio').title('Bio'),
+            S.documentTypeListItem('cv').title('CV'),
             orderableDocumentListDeskItem({
               type: 'overview',
               title: 'Overviews',

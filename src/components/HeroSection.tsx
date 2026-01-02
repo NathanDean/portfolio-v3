@@ -1,8 +1,10 @@
+import { client } from '@/sanity/lib/client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
+import CV from '@/types/cv';
 
-export default function HeroSection() {
+export default async function HeroSection() {
   return (
     <section
       id="home"
