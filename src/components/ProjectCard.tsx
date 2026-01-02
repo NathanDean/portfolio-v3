@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '@/sanity/lib/image';
 import Project from '@/types/Project';
@@ -49,14 +48,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         <div className="flex gap-2">
           {project.gitHubLink && (
-            <Link className="btn btn-blue w-1/2" href={project.gitHubLink}>
+            <a className="btn btn-blue w-1/2" href={project.gitHubLink}>
               GitHub
-            </Link>
+            </a>
           )}
           {project.appLink && (
-            <Link className="btn btn-blue w-1/2" href={project.appLink}>
-              Visit app
-            </Link>
+            <a className="btn btn-blue w-1/2" href={project.appLink}>
+              View app
+            </a>
           )}
         </div>
       </div>

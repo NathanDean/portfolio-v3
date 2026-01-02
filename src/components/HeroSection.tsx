@@ -1,7 +1,6 @@
 import { client } from '@/sanity/lib/client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
 import CV from '@/types/cv';
 
 export default async function HeroSection() {
@@ -27,18 +26,18 @@ export default async function HeroSection() {
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-6">
           <div className="flex flex-row space-x-6">
-            <Link
+            <a
               href="https://github.com/nathandean"
               className="flex flex-col justify-center"
             >
               <FontAwesomeIcon icon={faGithub} className="w-9 sm:w-12" />
-            </Link>
-            <Link
+            </a>
+            <a
               href="https://www.linkedin.com/in/nathanjdean/"
               className="flex flex-col justify-center"
             >
               <FontAwesomeIcon icon={faLinkedin} className="h-9 sm:h-14" />
-            </Link>
+            </a>
           </div>
           <a
             className="btn btn-hero"
