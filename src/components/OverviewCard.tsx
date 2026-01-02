@@ -16,7 +16,7 @@ export default function OverviewCard({ overview }: OverviewCardProps) {
         height={400}
         className="w-full h-64 px-10 object-contain"
       />
-      <div className="overview-text">
+      <div className="overview-text-container">
         <h4 className="pb-2 text-center">{overview.title}</h4>
         <p className="text-center">{overview.description}</p>
       </div>

@@ -13,7 +13,6 @@ export default async function OverviewSection() {
     {},
     options
   );
-  console.log(overviews);
 
   return (
     <section
@@ -21,7 +20,7 @@ export default async function OverviewSection() {
       className="flex flex-col justify-center items-center min-h-screen px-10 py-20 bg-sky-800"
     >
       <h2 className="sectionHeading text-white">at a glance</h2>
-      <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8 my-4">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 my-4">
         {overviews.map((overview) => (
           <OverviewCard key={overview._id} overview={overview} />
         ))}

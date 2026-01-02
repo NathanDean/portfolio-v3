@@ -36,7 +36,7 @@ body {
 }
 
 .nav-link {
-  @apply text-2xl sm:text-xl text-center;
+  @apply text-xl text-center;
 }
 
 .hero-heading {
@@ -134,9 +134,9 @@ form button {
 }
 
 .overview-card {
-  @apply flex flex-col items-center bg-white;
+  @apply flex flex-col justify-evenly items-center bg-white;
 }
 
-.overview-text {
+.overview-text-container {
   @apply flex flex-col items-center p-4;
 }

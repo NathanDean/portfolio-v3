@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div
       key={project.slug.current}
-      className="flex flex-col sm:flex-row sm:h-96"
+      className="flex flex-col sm:flex-row min-h-[24rem] h-full"
     >
       <div className="w-full sm:w-1/2 relative">
         <Image
