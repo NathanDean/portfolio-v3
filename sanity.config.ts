@@ -12,7 +12,6 @@ import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list';
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from './src/sanity/env';
 import { schema } from './src/sanity/schemaTypes';
-import { structure } from './src/sanity/structure';
 
 export default defineConfig({
   basePath: '/studio',
@@ -27,6 +26,12 @@ export default defineConfig({
           .title('Content')
           .items([
             S.documentTypeListItem('bio').title('Bio'),
+            orderableDocumentListDeskItem({
+              type: 'overview',
+              title: 'Overviews',
+              S,
+              context,
+            }),
             orderableDocumentListDeskItem({
               type: 'project',
               title: 'Projects',
