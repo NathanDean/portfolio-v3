@@ -5,9 +5,9 @@ import Header from '@/components/Header';
 
 export const metadata: Metadata = {
   title:
-    'Nathan Dean: MSc Computer Science & AI w/ comms & creative industries experience',
+    'Nathan Dean: Computer Science + AI grad with a background in creative industries communications',
   description:
-    'Nathan Dean: An MSc Computer Science and AI student with a background in communications and the creative industries',
+    'Nathan Dean: Computer Science + AI grad with a background in creative industries communications',
 };
 
 const outfit = Outfit({
