@@ -109,7 +109,7 @@ header a {
 }
 
 .btn-hero {
-  @apply rounded-sm hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)];
+  @apply border-3 rounded-sm text-lg sm:text-xl font-medium hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)];
 }
 
 .container {
