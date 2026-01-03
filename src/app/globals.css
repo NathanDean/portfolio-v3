@@ -121,7 +121,7 @@ header a {
 }
 
 form {
-  @apply flex flex-col space-y-4 md:w-1/2 sm:border-3 sm:p-12 sm:bg-slate-200 text-lg sm:text-xl tracking-widest;
+  @apply flex flex-col space-y-4 md:w-1/2 sm:border-3 rounded-sm sm:p-12 sm:bg-slate-200 text-lg sm:text-xl tracking-widest;
 }
 
 form label {
@@ -130,11 +130,11 @@ form label {
 
 form input,
 form textarea {
-  @apply border-1 sm:border-3 p-3 bg-white;
+  @apply border-1 sm:border-3 rounded-sm p-3 bg-white;
 }
 
 form button {
-  @apply p-2 border sm:border-3 hover:border-gray-900 bg-white hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
+  @apply p-2 border sm:border-3 rounded-sm hover:border-gray-900 bg-white hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
 }
 
 .overview-card {
