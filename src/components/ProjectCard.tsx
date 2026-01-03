@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View app
+              Live app
             </a>
           )}
         </div>
