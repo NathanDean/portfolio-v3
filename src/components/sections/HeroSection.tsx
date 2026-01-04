@@ -5,6 +5,7 @@ import Attribution from '../text/Attribution';
 import CV from '@/types/cv';
 
 export default async function HeroSection() {
+  // Sanity CV query
   const CV_URL_QUERY = `*[_type == "cv"][0]{
     "url": file.asset->url
   }`;
@@ -12,14 +13,14 @@ export default async function HeroSection() {
   const { url } = await client.fetch<CV>(CV_URL_QUERY, {}, options);
   console.log(url);
 
+  // Tailwind utility strings
+  const sectionStyles =
+    "flex flex-col justify-center items-center h-screen bg-[url('/water.jpg')] bg-cover bg-center bg-no-repeat";
   const linkStyles =
     'hover:text-white hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]';
 
   return (
-    <section
-      id="home"
-      className="flex flex-col justify-center items-center h-screen bg-[url('/water.jpg')] bg-cover bg-center bg-no-repeat"
-    >
+    <section id="home" className={sectionStyles}>
       <div className="w-3/4 md:w-2/5 mt-8 space-y-4">
         <h1>Hi, {`I'm`} Nathan</h1>
 
@@ -48,7 +49,7 @@ export default async function HeroSection() {
             </a>
           </div>
           <a
-            className={`p-2 border-3 rounded-sm text-lg sm:text-xl font-medium ${linkStyles}`}
+            className={`btn p-2 border-3 rounded-sm text-lg sm:text-xl font-medium ${linkStyles}`}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
