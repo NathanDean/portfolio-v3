@@ -17,12 +17,12 @@ export default async function HeroSection() {
       className="flex flex-col justify-center items-center h-screen bg-[url('/water.jpg')] bg-cover bg-center bg-no-repeat"
     >
       <div className="w-3/4 md:w-2/5 mt-8 space-y-4">
-        <h1 className="hero-heading">Hi, {`I'm`} Nathan</h1>
+        <h1>Hi, {`I'm`} Nathan</h1>
 
-        <h2 className="hero-subheading">
+        <p className="text-lg sm:text-xl">
           Computer Science + AI grad with a background in creative industries
           communications.
-        </h2>
+        </p>
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-6">
           <div className="flex flex-row space-x-6">
@@ -44,7 +44,7 @@ export default async function HeroSection() {
             </a>
           </div>
           <a
-            className="btn btn-hero"
+            className="p-2 border-3 rounded-sm text-lg sm:text-xl font-medium hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
             href={url}
             target="_blank"
             rel="noopener noreferrer"

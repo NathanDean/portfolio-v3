@@ -20,7 +20,7 @@ export default async function blogPost({
   return (
     <div className="flex flex-col justify-center items-center min-h-screen py-20 md:py-10 bg-sky-200">
       {post ? (
-        <div className="container py-20">
+        <div className="w-3/4 sm:w-5/8 py-20">
           <div className="post-card">
             <div className="flex flex-col xl:flex-row items-center pb-8 border-b border-dotted">
               <div className="mb-4 xl:mb-0 xl:mr-8">

@@ -2,6 +2,7 @@ import { PortableText } from '@portabletext/react';
 import { PortableTextBlock } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
 import createPortableTextComponents from '@/components/PortableText';
+import TextContainer from './TextContainer';
 
 export default async function AboutSection() {
   const BIO_QUERY = `*[_type == "bio"][0].bio`;
@@ -14,13 +15,13 @@ export default async function AboutSection() {
       id="about"
       className="relative flex justify-center items-center min-h-screen pt-20 pb-25 bg-[url('/sky.jpg')] bg-cover bg-top bg-no-repeat"
     >
-      <div className="container">
+      <TextContainer className="">
         <h2 className="sectionHeading">about me</h2>
 
-        <div className="bio space-y-2">
+        <div className="space-y-2 sm:text-lg">
           <PortableText value={bio} components={components} />
         </div>
-      </div>
+      </TextContainer>
 
       <div className="attribution absolute bottom-4 right-4">
         <p>

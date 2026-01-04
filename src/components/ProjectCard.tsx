@@ -46,7 +46,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex gap-2">
           {project.gitHubLink && (
             <a
-              className="btn btn-blue w-1/2"
+              className="btn w-1/2 border-sky-900 rounded-xl hover:border-sky-900 hover:bg-sky-900 text-sky-900 hover:text-white"
               href={project.gitHubLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           )}
           {project.appLink && (
             <a
-              className="btn btn-blue w-1/2"
+              className="btn w-1/2 border-sky-900 rounded-xl hover:border-sky-900 hover:bg-sky-900 text-sky-900 hover:text-white"
               href={project.appLink}
               target="_blank"
               rel="noopener noreferrer"

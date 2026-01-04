@@ -8,7 +8,7 @@ interface OverviewCardProps {
 
 export default function OverviewCard({ overview }: OverviewCardProps) {
   return (
-    <div className="overview-card">
+    <div className="flex flex-col justify-evenly items-center bg-white">
       <Image
         src={urlFor(overview.image).url()}
         alt=""
@@ -16,7 +16,7 @@ export default function OverviewCard({ overview }: OverviewCardProps) {
         height={400}
         className="w-full h-64 px-10 object-contain"
       />
-      <div className="overview-text-container">
+      <div className="flex flex-col items-center p-4">
         <h4 className="pb-2 text-center">{overview.title}</h4>
         <p className="text-center">{overview.description}</p>
       </div>

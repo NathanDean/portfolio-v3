@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+/* Theme */
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -13,6 +15,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* HTML + body */
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,102 +27,56 @@ body {
   font-family: var(--font-outfit), Arial, Helvetica, sans-serif;
 }
 
-.nav-background {
-  @apply absolute inset-0 h-24 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,black_0%,black_30%,rgba(0,0,0,0.8)_60%,transparent_100%)] pointer-events-none;
+/* Headings + text */
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+a {
+  @apply tracking-widest;
 }
 
-.nav-text-container {
-  @apply relative;
+h1 {
+  @apply text-3xl sm:text-5xl;
 }
 
-.logo {
-  @apply text-2xl;
-}
-
-.nav-link {
-  @apply text-xl text-center;
-}
-
-.hero-heading {
-  @apply text-3xl sm:text-5xl tracking-widest;
-}
-
-.hero-subheading {
-  @apply text-lg sm:text-xl tracking-widest;
-}
-
-.sectionHeading {
-  @apply w-full pb-8 text-xl sm:text-2xl text-center tracking-widest leading-10 underline underline-offset-10 decoration-1 decoration-dotted;
-}
-
-.post-heading {
-  @apply pb-4 xl:pb-0 text-xl sm:text-2xl tracking-widest leading-10 underline underline-offset-10 decoration-1 decoration-dotted;
-}
-
-.post-subheading {
-  @apply pt-4 text-lg tracking-widest leading-7 underline underline-offset-5 decoration-1 decoration-dotted;
-}
-
+h2,
 h3 {
-  @apply text-xl sm:text-2xl font-medium tracking-widest;
+  @apply text-xl sm:text-2xl;
+}
+
+h2 {
+  @apply pb-10 text-center underline underline-offset-10 decoration-1 decoration-dotted;
+}
+
+h3,
+h4 {
+  @apply font-medium;
 }
 
 h4 {
-  @apply text-lg sm:text-xl tracking-widest font-medium;
-}
-
-p,
-span {
-  @apply tracking-widest;
+  @apply text-lg sm:text-xl;
 }
 
 .attribution {
   @apply max-w-1/2 text-xs sm:text-sm text-right text-sky-950;
 }
 
-.description {
-  @apply text-sm sm:text-base;
-}
+/* Links */
 
-.bio {
-  @apply text-base sm:text-lg;
-}
-
-a {
-  @apply tracking-widest hover:text-white hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] transition duration-125;
-}
-
-header a {
-  @apply text-2xl;
-}
-
-.light-text {
-  @apply text-white;
+header a,
+.attribution a {
+  @apply hover:text-white hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] transition duration-125;
 }
 
 .btn {
-  @apply p-2 border sm:border-3 rounded-xl sm:text-lg sm:font-medium text-center hover:drop-shadow-none;
+  @apply p-2 border sm:border-3 sm:text-lg sm:font-medium text-center;
 }
 
-.btn-blue {
-  @apply border-sky-900 hover:border-sky-900 hover:bg-sky-900 text-sky-900 hover:text-white;
-}
-
-.btn-dark {
-  @apply border-sky-900 bg-sky-900 hover:bg-white text-white hover:text-sky-900;
-}
-
-.btn-hero {
-  @apply border-3 rounded-sm text-lg sm:text-xl font-medium hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)];
-}
-
-.container {
-  @apply w-3/4 sm:w-5/8;
-}
-
-.post-card {
-  @apply pb-20 space-y-4;
-}
+/* Forms */
 
 form {
   @apply flex flex-col space-y-4 md:w-1/2 sm:border-2 rounded-sm sm:p-12 sm:bg-slate-200 text-lg sm:text-xl tracking-widest;
@@ -135,12 +93,4 @@ form textarea {
 
 form button {
   @apply p-2 border sm:border-2 rounded-sm hover:border-gray-900 bg-white hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
-}
-
-.overview-card {
-  @apply flex flex-col justify-evenly items-center bg-white;
-}
-
-.overview-text-container {
-  @apply flex flex-col items-center p-4;
 }

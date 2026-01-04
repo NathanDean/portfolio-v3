@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 
 export default function Header() {
+  // Mobile menu toggling
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isMenuOpaque, setIsMenuOpaque] = useState(false);
@@ -29,6 +30,7 @@ export default function Header() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  // Scrolling behaviour
   const scrollToSection = (sectionId: string) => {
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
@@ -42,6 +44,7 @@ export default function Header() {
     }
   };
 
+  // Menu sections
   const sections = [
     { navText: 'at a glance', title: 'overview' },
     { navText: 'projects', title: 'projects' },
@@ -49,14 +52,20 @@ export default function Header() {
     { navText: 'get in touch', title: 'contact' },
   ];
 
+  // Tailwind utility strings
+  const navBackgroundStyles =
+    'absolute inset-0 h-24 backdrop-blur-sm [mask-image:linear-gradient(to_bottom,black_0%,black_30%,rgba(0,0,0,0.8)_60%,transparent_100%)] pointer-events-none';
+  const navTextContainerStyles = 'relative';
+  const mobileMenuStyles = `${isMenuOpaque ? 'opacity-100' : 'opacity-0'} lg:hidden fixed inset-0 w-full h-screen p-6 transition-opacity duration-300 ease-in-out z-0 flex justify-center items-center bg-[var(--background)] text-[var(--foreground)]`;
+
   return (
     <header className="sticky top-0 left-0 right-0 z-10 py-4 bg-transparent">
-      <div className="nav-background" />
+      <div className={navBackgroundStyles} />
 
-      <div className="nav-text-container">
+      <div className={navTextContainerStyles}>
         <div className="px-6 flex justify-between items-center">
           <a
-            className="logo"
+            className="text-2xl"
             href="#home"
             onClick={(e) => {
               if (
@@ -78,7 +87,7 @@ export default function Header() {
             {sections.map((section) => (
               <a
                 key={section.title}
-                className="nav-link"
+                className="text-xl"
                 href={`#${section.title}`}
                 onClick={(e) => {
                   if (
@@ -134,14 +143,11 @@ export default function Header() {
       {/* Mobile dropdown menu */}
 
       {isMenuVisible && (
-        <div
-          data-testid="mobile-menu"
-          className={`${isMenuOpaque ? 'opacity-100' : 'opacity-0'} lg:hidden fixed inset-0 w-full h-screen p-6 transition-opacity duration-300 ease-in-out z-0 flex justify-center items-center bg-[var(--background)] text-[var(--foreground)]`}
-        >
+        <div data-testid="mobile-menu" className={mobileMenuStyles}>
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
               <a
-                className="logo"
+                className="text-2xl"
                 href="#home"
                 onClick={(e) => {
                   if (
@@ -196,7 +202,7 @@ export default function Header() {
             {sections.map((section) => (
               <a
                 key={section.title}
-                className="nav-link"
+                className="text-xl text-center"
                 href={`${section.title}`}
                 onClick={(e) => {
                   if (
