@@ -11,17 +11,17 @@ export default async function ProjectSection() {
   const projects = await client.fetch<Project[]>(PROJECTS_QUERY, {}, options);
 
   return (
-    <div
+    <section
       id="projects"
       className="flex flex-col justify-center items-center min-h-screen px-10 py-20 bg-sky-900"
     >
       <h2 className="sectionHeading text-white">selected projects</h2>
 
-      <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-8 my-4">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 my-4">
         {projects.map((project) => (
           <ProjectCard key={project._id} project={project} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
