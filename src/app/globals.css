@@ -35,7 +35,8 @@ h3,
 h4,
 p,
 span,
-a {
+a,
+form {
   @apply tracking-widest;
 }
 
@@ -57,24 +58,34 @@ h4 {
   @apply font-medium;
 }
 
-h4 {
+h4,
+form {
   @apply text-lg sm:text-xl;
 }
 
-/* Links */
+/* Links and buttons */
 
-a {
-  @apply transition duration-125;
+a,
+button {
+  @apply transition duration-150;
 }
 
+button,
 .btn {
   @apply p-2 border sm:border-3 sm:text-lg sm:font-medium text-center;
 }
 
 /* Forms */
 
+form,
+form input,
+form textarea,
+form button {
+  @apply sm:border-2 rounded-sm;
+}
+
 form {
-  @apply flex flex-col space-y-4 md:w-1/2 sm:border-2 rounded-sm sm:p-12 sm:bg-slate-200 text-lg sm:text-xl tracking-widest;
+  @apply flex flex-col space-y-4;
 }
 
 form label {
@@ -83,9 +94,9 @@ form label {
 
 form input,
 form textarea {
-  @apply border-1 sm:border-2 rounded-sm focus:outline-none p-3 bg-white;
+  @apply focus:outline-none p-3 bg-white;
 }
 
 form button {
-  @apply p-2 border sm:border-2 rounded-sm hover:border-gray-900 bg-white hover:bg-gray-900 sm:text-xl hover:text-white cursor-pointer;
+  @apply hover:border-gray-900 bg-white hover:bg-gray-900 hover:text-white cursor-pointer;
 }

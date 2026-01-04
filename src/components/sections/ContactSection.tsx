@@ -19,7 +19,10 @@ export default function ContactSection() {
           <p>{`I'll`} get back to you as soon as I can.</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          className="md:w-1/2 sm:p-12 sm:bg-slate-200"
+        >
           <label htmlFor="email">Email Address</label>
           <input id="email" type="email" name="email" />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
