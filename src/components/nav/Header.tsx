@@ -60,6 +60,7 @@ export default function Header() {
             {sections.map((section) => (
               <NavLink
                 key={section.text}
+                className="text-xl"
                 title={section.title}
                 text={section.text}
               />
@@ -148,7 +149,7 @@ export default function Header() {
             {sections.map((section) => (
               <NavLink
                 key={section.text}
-                className="text-center"
+                className="text-xl text-center"
                 title={section.title}
                 text={section.text}
               />

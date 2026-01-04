@@ -67,10 +67,6 @@ a {
   @apply transition duration-125;
 }
 
-header a {
-  @apply hover:text-white hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] transition duration-125;
-}
-
 .btn {
   @apply p-2 border sm:border-3 sm:text-lg sm:font-medium text-center;
 }

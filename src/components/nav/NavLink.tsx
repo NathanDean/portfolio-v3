@@ -24,7 +24,7 @@ export default function NavLink({ className = '', title, text }: NavLinkProps) {
   return (
     <a
       key={title}
-      className={`text-xl ${className}`}
+      className={`hover:text-white hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] ${className}`}
       href={`#${title}`}
       onClick={(e) => {
         if (typeof window !== 'undefined' && window.location.pathname === '/') {
