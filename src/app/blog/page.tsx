@@ -2,7 +2,7 @@ import { client } from '@/sanity/lib/client';
 import BlogPost from '@/types/BlogPost';
 import { PortableText } from '@portabletext/react';
 import { PortableTextBlock } from '@portabletext/types';
-import createPortableTextComponents from '@/components/PortableText';
+import createPortableTextComponents from '@/components/text/PortableText';
 import Link from 'next/link';
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';

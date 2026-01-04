@@ -1,6 +1,6 @@
 import { client } from '@/sanity/lib/client';
 import { PortableText } from '@portabletext/react';
-import createPortableTextComponents from '@/components/PortableText';
+import createPortableTextComponents from '@/components/text/PortableText';
 import Link from 'next/link';
 import Image from 'next/image';
 import { urlFor } from '@/sanity/lib/image';

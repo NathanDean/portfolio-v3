@@ -1,8 +1,8 @@
 import { PortableText } from '@portabletext/react';
 import { PortableTextBlock } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
-import createPortableTextComponents from '@/components/PortableText';
-import TextContainer from './TextContainer';
+import createPortableTextComponents from '@/components/text/PortableText';
+import TextContainer from '../text/TextContainer';
 
 export default async function AboutSection() {
   const BIO_QUERY = `*[_type == "bio"][0].bio`;

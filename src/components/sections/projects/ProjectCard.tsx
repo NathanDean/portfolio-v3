@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { PortableText } from '@portabletext/react';
 import { urlFor } from '@/sanity/lib/image';
 import Project from '@/types/Project';
-import createPortableTextComponents from '@/components/PortableText';
+import createPortableTextComponents from '@/components/text/PortableText';
 
 interface ProjectCardProps {
   project: Project;
