@@ -3,7 +3,7 @@ interface MenuButtonProps {
   isMenuOpen: Boolean;
 }
 
-export default function MenuButton({
+export default function ToggleMenuButton({
   toggleMenu,
   isMenuOpen,
 }: MenuButtonProps) {
