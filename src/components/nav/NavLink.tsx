@@ -4,9 +4,15 @@ interface NavLinkProps {
   className?: string;
   title: string;
   text: React.ReactNode;
+  setIsMenuOpen?: (isOpen: boolean) => void;
 }
 
-export default function NavLink({ className = '', title, text }: NavLinkProps) {
+export default function NavLink({
+  className = '',
+  title,
+  text,
+  setIsMenuOpen,
+}: NavLinkProps) {
   // Scrolling behaviour
   const scrollToSection = (sectionId: string) => {
     const prefersReducedMotion = window.matchMedia(
@@ -31,6 +37,9 @@ export default function NavLink({ className = '', title, text }: NavLinkProps) {
           e.preventDefault();
         }
         scrollToSection(title);
+        if (setIsMenuOpen) {
+          setIsMenuOpen(false);
+        }
       }}
     >
       {text}

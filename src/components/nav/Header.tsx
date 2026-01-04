@@ -70,7 +70,7 @@ export default function Header() {
           {/* Mobile menu button */}
 
           <button
-            className="lg:hidden"
+            className="lg:hidden border-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -112,7 +112,7 @@ export default function Header() {
               <HomeLink />
 
               <button
-                className="lg:hidden"
+                className="lg:hidden border-none"
                 onClick={toggleMenu}
                 aria-label="Toggle menu"
               >
@@ -152,6 +152,7 @@ export default function Header() {
                 className="text-xl text-center"
                 title={section.title}
                 text={section.text}
+                setIsMenuOpen={setIsMenuOpen}
               />
             ))}
           </nav>
