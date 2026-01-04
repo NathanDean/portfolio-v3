@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import NavLink from './NavLink';
 
 export default function Header() {
   // Mobile menu toggling
@@ -30,26 +31,12 @@ export default function Header() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Scrolling behaviour
-  const scrollToSection = (sectionId: string) => {
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches;
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: prefersReducedMotion ? 'auto' : 'smooth',
-        block: 'start',
-      });
-    }
-  };
-
   // Menu sections
   const sections = [
-    { navText: 'at a glance', title: 'overview' },
-    { navText: 'projects', title: 'projects' },
-    { navText: 'about me', title: 'about' },
-    { navText: 'get in touch', title: 'contact' },
+    { text: 'at a glance', title: 'overview' },
+    { text: 'projects', title: 'projects' },
+    { text: 'about me', title: 'about' },
+    { text: 'get in touch', title: 'contact' },
   ];
 
   // Tailwind utility strings
@@ -64,43 +51,22 @@ export default function Header() {
 
       <div className={navTextContainerStyles}>
         <div className="px-6 flex justify-between items-center">
-          <a
+          <NavLink
             className="text-2xl"
-            href="#home"
-            onClick={(e) => {
-              if (
-                typeof window !== 'undefined' &&
-                window.location.pathname === '/'
-              ) {
-                e.preventDefault();
-              }
-              scrollToSection('home');
-            }}
-          >
-            <span className="sm:hidden">nd</span>
-            <span className="hidden sm:inline-block">nathan dean</span>
-          </a>
+            title="home"
+            text={
+              <>
+                <span className="sm:hidden">nd</span>
+                <span className="hidden sm:inline-block">nathan dean</span>
+              </>
+            }
+          />
 
           {/* Full nav menu */}
 
           <nav className="hidden lg:flex space-x-10">
             {sections.map((section) => (
-              <a
-                key={section.title}
-                className="text-xl"
-                href={`#${section.title}`}
-                onClick={(e) => {
-                  if (
-                    typeof window !== 'undefined' &&
-                    window.location.pathname === '/'
-                  ) {
-                    e.preventDefault();
-                  }
-                  scrollToSection(section.title);
-                }}
-              >
-                {section.navText}
-              </a>
+              <NavLink title={section.title} text={section.text} />
             ))}
           </nav>
 
@@ -146,23 +112,16 @@ export default function Header() {
         <div data-testid="mobile-menu" className={mobileMenuStyles}>
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
-              <a
+              <NavLink
                 className="text-2xl"
-                href="#home"
-                onClick={(e) => {
-                  if (
-                    typeof window !== 'undefined' &&
-                    window.location.pathname === '/'
-                  ) {
-                    e.preventDefault();
-                  }
-                  scrollToSection('home');
-                  setIsMenuOpen(false);
-                }}
-              >
-                <span className="sm:hidden">nd</span>
-                <span className="hidden sm:inline-block">nathan dean</span>
-              </a>
+                title="home"
+                text={
+                  <>
+                    <span className="sm:hidden">nd</span>
+                    <span className="hidden sm:inline-block">nathan dean</span>
+                  </>
+                }
+              />
 
               <button
                 className="lg:hidden"
@@ -200,23 +159,7 @@ export default function Header() {
 
           <nav className="flex flex-col justify-center h-1/2 space-y-6">
             {sections.map((section) => (
-              <a
-                key={section.title}
-                className="text-xl text-center"
-                href={`${section.title}`}
-                onClick={(e) => {
-                  if (
-                    typeof window !== 'undefined' &&
-                    window.location.pathname === '/'
-                  ) {
-                    e.preventDefault();
-                  }
-                  scrollToSection(section.title);
-                  setIsMenuOpen(false);
-                }}
-              >
-                {section.navText}
-              </a>
+              <NavLink title={section.title} text={section.text} />
             ))}
           </nav>
         </div>

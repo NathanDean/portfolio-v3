@@ -2,7 +2,7 @@ import React from 'react';
 
 interface TextContainerProps {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 
 export default function TextContainer({
