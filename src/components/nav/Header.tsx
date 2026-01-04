@@ -5,7 +5,6 @@ import FullNavMenu from './FullNavMenu';
 import MobileNavMenu from './MobileNavMenu';
 import HomeLink from './HomeLink';
 import ToggleMenuButton from './ToggleMenuButton';
-import NavLink from './NavLink';
 
 export default function Header() {
   // Mobile menu toggling
@@ -59,8 +58,6 @@ export default function Header() {
           <ToggleMenuButton toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
         </div>
       </div>
-
-      {/* Mobile dropdown menu */}
 
       {isMenuVisible && (
         <MobileNavMenu
