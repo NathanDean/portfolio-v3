@@ -1,6 +1,6 @@
 interface MenuButtonProps {
   toggleMenu: () => void;
-  isMenuOpen: Boolean;
+  isMenuOpen: boolean;
 }
 
 export default function ToggleMenuButton({

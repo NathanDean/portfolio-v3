@@ -4,8 +4,8 @@ import NavLink from './NavLink';
 
 interface MobileNavMenuProps {
   toggleMenu: () => void;
-  isMenuOpen: Boolean;
-  isMenuOpaque: Boolean;
+  isMenuOpen: boolean;
+  isMenuOpaque: boolean;
   setIsMenuOpen?: (isOpen: boolean) => void;
   sections: { text: string; title: string }[];
 }
