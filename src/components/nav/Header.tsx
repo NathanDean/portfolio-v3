@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import HomeLink from './HomeLink';
 import NavLink from './NavLink';
 
 export default function Header() {
@@ -51,22 +52,17 @@ export default function Header() {
 
       <div className={navTextContainerStyles}>
         <div className="px-6 flex justify-between items-center">
-          <NavLink
-            className="text-2xl"
-            title="home"
-            text={
-              <>
-                <span className="sm:hidden">nd</span>
-                <span className="hidden sm:inline-block">nathan dean</span>
-              </>
-            }
-          />
+          <HomeLink />
 
           {/* Full nav menu */}
 
           <nav className="hidden lg:flex space-x-10">
             {sections.map((section) => (
-              <NavLink title={section.title} text={section.text} />
+              <NavLink
+                key={section.text}
+                title={section.title}
+                text={section.text}
+              />
             ))}
           </nav>
 
@@ -112,16 +108,7 @@ export default function Header() {
         <div data-testid="mobile-menu" className={mobileMenuStyles}>
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
-              <NavLink
-                className="text-2xl"
-                title="home"
-                text={
-                  <>
-                    <span className="sm:hidden">nd</span>
-                    <span className="hidden sm:inline-block">nathan dean</span>
-                  </>
-                }
-              />
+              <HomeLink />
 
               <button
                 className="lg:hidden"
@@ -159,7 +146,12 @@ export default function Header() {
 
           <nav className="flex flex-col justify-center h-1/2 space-y-6">
             {sections.map((section) => (
-              <NavLink title={section.title} text={section.text} />
+              <NavLink
+                key={section.text}
+                className="text-center"
+                title={section.title}
+                text={section.text}
+              />
             ))}
           </nav>
         </div>

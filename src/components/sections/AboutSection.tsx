@@ -2,6 +2,7 @@ import { PortableText } from '@portabletext/react';
 import { PortableTextBlock } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
 import createPortableTextComponents from '@/components/text/PortableText';
+import Attribution from '../text/Attribution';
 import TextContainer from '../text/TextContainer';
 
 export default async function AboutSection() {
@@ -23,26 +24,10 @@ export default async function AboutSection() {
         </div>
       </TextContainer>
 
-      <div className="attribution absolute bottom-4 right-4">
-        <p>
-          Photo by{' '}
-          <a
-            href="https://unsplash.com/@resul?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resul Mentes
-          </a>{' '}
-          on{' '}
-          <a
-            href="https://unsplash.com/photos/white-clouds-and-blue-skies-DbwYNr8RPbg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Unsplash
-          </a>
-        </p>
-      </div>
+      <Attribution
+        name="Resul Mentes"
+        link="https://unsplash.com/photos/white-clouds-and-blue-skies-DbwYNr8RPbg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      />
     </div>
   );
 }

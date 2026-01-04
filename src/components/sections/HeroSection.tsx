@@ -1,6 +1,7 @@
 import { client } from '@/sanity/lib/client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import Attribution from '../text/Attribution';
 import CV from '@/types/cv';
 
 export default async function HeroSection() {
@@ -10,6 +11,9 @@ export default async function HeroSection() {
   const options = { next: { revalidate: 30 } };
   const { url } = await client.fetch<CV>(CV_URL_QUERY, {}, options);
   console.log(url);
+
+  const linkStyles =
+    'hover:text-white hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]';
 
   return (
     <section
@@ -28,7 +32,7 @@ export default async function HeroSection() {
           <div className="flex flex-row space-x-6">
             <a
               href="https://github.com/nathandean"
-              className="flex flex-col justify-center"
+              className={linkStyles}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -36,7 +40,7 @@ export default async function HeroSection() {
             </a>
             <a
               href="https://www.linkedin.com/in/nathanjdean/"
-              className="flex flex-col justify-center"
+              className={linkStyles}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -44,7 +48,7 @@ export default async function HeroSection() {
             </a>
           </div>
           <a
-            className="p-2 border-3 rounded-sm text-lg sm:text-xl font-medium hover:drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]"
+            className={`p-2 border-3 rounded-sm text-lg sm:text-xl font-medium ${linkStyles}`}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
@@ -54,26 +58,10 @@ export default async function HeroSection() {
         </div>
       </div>
 
-      <div className="attribution absolute bottom-4 right-4">
-        <p>
-          Photo by{' '}
-          <a
-            href="https://unsplash.com/@marissar_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Marissa Rodriguez
-          </a>{' '}
-          on{' '}
-          <a
-            href="https://unsplash.com/photos/light-reflected-on-water-at-daytime-2mKYEVGA4jE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Unsplash
-          </a>
-        </p>
-      </div>
+      <Attribution
+        name="Marissa Rodrigue"
+        link="https://unsplash.com/photos/light-reflected-on-water-at-daytime-2mKYEVGA4jE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+      />
     </section>
   );
 }
