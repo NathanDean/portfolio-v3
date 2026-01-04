@@ -80,7 +80,7 @@ export default function Header() {
         <div data-testid="mobile-menu" className={mobileMenuStyles}>
           <div className="fixed top-0 left-0 right-0 px-6 py-4">
             <div className="flex justify-between items-center bg">
-              <HomeLink />
+              <HomeLink setIsMenuOpen={setIsMenuOpen} />
 
               <MenuButton toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
             </div>

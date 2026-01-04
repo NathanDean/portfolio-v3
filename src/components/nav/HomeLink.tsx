@@ -1,6 +1,10 @@
 import NavLink from './NavLink';
 
-export default function HomeLink() {
+interface HomeLinkProps {
+  setIsMenuOpen?: (isOpen: boolean) => void;
+}
+
+export default function HomeLink({ setIsMenuOpen }: HomeLinkProps) {
   return (
     <NavLink
       className="text-2xl"
@@ -11,6 +15,7 @@ export default function HomeLink() {
           <span className="hidden sm:inline-block">nathan dean</span>
         </>
       }
+      setIsMenuOpen={setIsMenuOpen}
     />
   );
 }
