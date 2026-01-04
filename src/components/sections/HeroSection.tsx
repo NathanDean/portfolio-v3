@@ -49,7 +49,7 @@ export default async function HeroSection() {
             </a>
           </div>
           <a
-            className={`btn p-2 border-3 rounded-sm text-lg sm:text-xl font-medium ${linkStyles}`}
+            className={`p-2 border-3 rounded-sm text-lg sm:text-xl text-center font-medium ${linkStyles}`}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
