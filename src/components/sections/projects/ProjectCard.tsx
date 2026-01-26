@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col justify-between w-full p-6 md:w-1/2 space-y-4 border-t border-gray-200 sm:border-l sm:border-t-0 bg-white shadow-sm overflow-hidden">
         <div className="space-y-4">
           <h3>{project.name}</h3>
-          <div className="xl:flex flex-row text-sm lg:text-base">
+          <div className="xl:flex flex-row">
             <h4 className="inline">Tools:</h4>
             <div className="flex flex-wrap">
               {project.tools.map((tool) => (
