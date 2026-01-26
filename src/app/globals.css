@@ -58,7 +58,6 @@ h4 {
   @apply font-medium;
 }
 
-h4,
 form {
   @apply text-lg sm:text-xl;
 }
