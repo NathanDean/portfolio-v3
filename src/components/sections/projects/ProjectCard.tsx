@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <div key={project.slug.current} className="flex flex-col md:flex-row">
-      <div className="w-full md:w-1/2 relative">
+      <div className="w-full h-96 md:h-auto md:w-1/2 relative">
         <Image
           src={urlFor(project.image).url()}
           alt=""
@@ -41,18 +41,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           <div className="xl:flex flex-row">
-            <h4 className="inline pr-3">Features:</h4>
-            <div className="flex flex-wrap -ml-3">
-              {project.features &&
-                project.features.map((feature) => (
-                  <span
-                    key={feature.name}
-                    className="px-3 mb-1 border-r border-gray-600 last:border-none"
-                  >
-                    {feature.name}
-                  </span>
-                ))}
-            </div>
+            {project.features && (
+              <>
+                <h4 className="inline pr-3">Features:</h4>
+                <div className="flex flex-wrap -ml-3">
+                  {project.features &&
+                    project.features.map((feature) => (
+                      <span
+                        key={feature.name}
+                        className="px-3 mb-1 border-r border-gray-600 last:border-none"
+                      >
+                        {feature.name}
+                      </span>
+                    ))}
+                </div>
+              </>
+            )}
           </div>
 
           <div>
