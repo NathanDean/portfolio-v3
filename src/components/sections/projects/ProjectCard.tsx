@@ -27,12 +27,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="space-y-4">
           <h3>{project.name}</h3>
           <div className="xl:flex flex-row">
-            <h4 className="inline">Tools:</h4>
-            <div className="flex flex-wrap">
+            <h4 className="inline pr-3">Tools:</h4>
+            <div className="flex flex-wrap -ml-3">
               {project.tools.map((tool) => (
                 <span
                   key={tool.name}
-                  className="px-2 border-r border-gray-600 first:pl-0 xl:first:pl-2 last:border-none"
+                  className="px-3 mb-1 border-r border-gray-600 last:border-none"
                 >
                   {tool.name}
                 </span>
