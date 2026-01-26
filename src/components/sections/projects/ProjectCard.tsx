@@ -17,8 +17,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <Image
           src={urlFor(project.image).url()}
           alt=""
-          width={400}
-          height={400}
+          width={2000}
+          height={2000}
           className="w-full h-full object-cover"
         />
       </div>

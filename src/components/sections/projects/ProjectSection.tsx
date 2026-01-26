@@ -17,7 +17,7 @@ export default async function ProjectSection() {
     >
       <h2 className="sectionHeading text-white">selected projects</h2>
 
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 my-4">
+      <div className="grid grid-cols-1 max-w-3/4 gap-8 my-4">
         {projects.map((project) => (
           <ProjectCard key={project._id} project={project} />
         ))}
