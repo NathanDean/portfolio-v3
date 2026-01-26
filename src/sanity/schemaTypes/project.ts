@@ -50,5 +50,11 @@ export const projectType = defineType({
       of: [{ type: 'reference', to: [{ type: 'tool' }] }],
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: 'features',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'feature' }] }],
+      validation: (rule) => rule.required(),
+    }),
   ],
 });

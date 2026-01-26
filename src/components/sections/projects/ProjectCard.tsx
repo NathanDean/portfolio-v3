@@ -40,6 +40,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </div>
           </div>
 
+          <div className="xl:flex flex-row">
+            <h4 className="inline pr-3">Features:</h4>
+            <div className="flex flex-wrap -ml-3">
+              {project.features &&
+                project.features.map((feature) => (
+                  <span
+                    key={feature.name}
+                    className="px-3 mb-1 border-r border-gray-600 last:border-none"
+                  >
+                    {feature.name}
+                  </span>
+                ))}
+            </div>
+          </div>
+
           <div>
             <PortableText value={project.description} components={components} />
           </div>

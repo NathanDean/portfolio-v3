@@ -6,6 +6,7 @@ import { bioType } from './bio';
 import { toolType } from './tool';
 import { blogPostType } from './blogPost';
 import { tagType } from './tag';
+import { featureType } from './feature';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -14,6 +15,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     projectType,
     bioType,
     toolType,
+    featureType,
     blogPostType,
     tagType,
   ],

@@ -3,6 +3,7 @@ import { Slug } from 'sanity';
 import { SanityDocument } from 'next-sanity';
 import { PortableTextBlock } from 'next-sanity';
 import Tool from './Tool';
+import Feature from './Feature';
 
 export default interface Project extends SanityDocument {
   name: string;
@@ -12,4 +13,5 @@ export default interface Project extends SanityDocument {
   appLink?: string;
   gitHubLink?: string;
   tools: Tool[];
+  features: Feature[];
 }

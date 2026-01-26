@@ -40,6 +40,7 @@ export default defineConfig({
               context,
             }),
             S.documentTypeListItem('tool').title('Tools'),
+            S.documentTypeListItem('feature').title('Features'),
             S.documentTypeListItem('blogPost').title('Blog posts'),
             S.documentTypeListItem('tag').title('Tags'),
           ]);
