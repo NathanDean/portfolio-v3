@@ -26,17 +26,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col justify-between w-full p-6 sm:w-1/2 space-y-4 border-t border-gray-200 sm:border-l sm:border-t-0 bg-white shadow-sm overflow-hidden">
         <div className="space-y-4">
           <h3>{project.name}</h3>
-
-          <h4>Tools</h4>
-          <div className="flex flex-wrap">
-            {project.tools.map((tool) => (
-              <span
-                key={tool.name}
-                className="px-2 border-l border-gray-600 first:border-none text-sm"
-              >
-                {tool.name}
-              </span>
-            ))}
+          <div className="xl:flex flex-row text-sm lg:text-base">
+            <h4 className="inline">Tools:</h4>
+            <div className="flex flex-wrap">
+              {project.tools.map((tool) => (
+                <span
+                  key={tool.name}
+                  className="px-2 border-r border-gray-600 first:pl-0 xl:first:pl-2 last:border-none"
+                >
+                  {tool.name}
+                </span>
+              ))}
+            </div>
           </div>
 
           <div>
