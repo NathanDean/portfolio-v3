@@ -12,8 +12,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const components = createPortableTextComponents();
 
   return (
-    <div key={project.slug.current} className="flex flex-col md:flex-row">
-      <div className="w-full h-96 md:h-auto md:w-1/2 relative">
+    <div key={project.slug.current} className="flex flex-col xl:flex-row">
+      <div className="w-full h-96 lg:h-auto xl:w-1/2 relative">
         <Image
           src={urlFor(project.image).url()}
           alt=""
@@ -23,7 +23,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         />
       </div>
 
-      <div className="flex flex-col justify-between w-full p-6 md:w-1/2 space-y-4 border-t border-gray-200 sm:border-l sm:border-t-0 bg-white shadow-sm overflow-hidden">
+      <div className="flex flex-col justify-between w-full p-6 xl:w-1/2 space-y-4 border-t border-gray-200 sm:border-l sm:border-t-0 bg-white shadow-sm overflow-hidden">
         <div className="space-y-4">
           <h3>{project.name}</h3>
           <div className="xl:flex flex-row">
